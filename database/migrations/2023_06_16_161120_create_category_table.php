@@ -13,14 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('spaces', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('slug');
-            $table->string('image')->nullable();
-            $table->string('location');
-            $table->longText('content');
-            $table->string('marker')->nullable();
+        Schema::create('category', function (Blueprint $table) {
+            $table->string('id')->primary();
+            $table->string('nama');
+            $table->string('foto')->nullable();
+            $table->longText('deskripsi');
             $table->timestamps();
         });
     }
@@ -32,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('spaces');
+        Schema::dropIfExists('category');
     }
 };

@@ -42,19 +42,19 @@
                     <div class="card-body">
                         <p>
                         <h4><strong>Nama Space :</strong></h4>
-                        <h5>{{ $spaces->name }}</h5>
+                        <h5>{{ $spaces->nama }}</h5>
                         </p>
 
                         <p>
                         <h4><strong>Keterangan Space :</strong></h4>
-                        <p>{{ $spaces->content }}</p>
+                        <p>{{ $spaces->deskripsi }}</p>
                         </p>
 
                         <p>
                         <h4>
                             <strong>Foto</strong>
                         </h4>
-                        <img class="img-fluid" width="200" src="{{ url('storage/'.$spaces->image) }}"
+                        <img class="img-fluid" width="200" src="{{ url('storage/'.$spaces->foto) }}"
                             alt="">
                         </p>
                     </div>
