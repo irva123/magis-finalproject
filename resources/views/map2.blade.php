@@ -150,10 +150,10 @@
 });
 
     @foreach ($spaces as $item)
-            L.marker([<?=$item->location?>], {icon: new MyIcon({iconUrl: '<?=($item->marker=='')?url('storage/icon-biru.png') : url('storage/'.$item->marker)?>'})}).addTo(map)
+            L.marker([<?=$item->titik_koordinat?>], {icon: new MyIcon({iconUrl: '<?=($item->marker->marker=='')?url('storage/icon-biru.png') : url('storage/'.$item->marker->marker)?>'})}).addTo(map)
                 .bindPopup(
-                    "<div class='my-2'><img src='{{ url('storage/'.$item->image) }}' class='img-fluid' width='700px'></div>" +
-                    "<div class='my-2'><strong>Nama Space:</strong> <br>{{ $item->name }}</div>" +
+                    "<div class='my-2'><img src='{{ url('storage/'.$item->foto) }}' class='img-fluid' width='700px'></div>" +
+                    "<div class='my-2'><strong>Nama Space:</strong> <br>{{ $item->nama }}</div>" +
                     "<div><a href='{{ route('map.show', $item->slug) }}' class='btn btn-outline-info btn-sm'>Read More</a></div>" +
                     "<div class='my-2'></div>"
                 ).addTo(map);
@@ -189,8 +189,8 @@
                 
             L.marker([<?=$item->location?>], {icon: new MyIcon({iconUrl: '<?=($item->marker=='')?url('storage/icon-biru.png') : url('storage/'.$item->marker)?>'})}).addTo(map)
                 .bindPopup(
-                    "<div class='my-2'><img src=''{{ url('storage/'.$item->image) }}'' class='img-fluid' width='700px'></div>" +
-                    "<div class='my-2'><strong>Nama Space:</strong> <br>{{ $item->name }}</div>" +
+                    "<div class='my-2'><img src=''{{ url('storage/'.$item->foto) }}'' class='img-fluid' width='700px'></div>" +
+                    "<div class='my-2'><strong>Nama Space:</strong> <br>{{ $item->nama }}</div>" +
                     "<div><a href='{{ route('map.show', $item->slug) }}' class='btn btn-outline-info btn-sm'>Detail Space</a></div>" +
                     "<div class='my-2'></div>"
                 ).addTo(map);

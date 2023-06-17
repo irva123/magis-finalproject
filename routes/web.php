@@ -7,6 +7,9 @@ use App\Http\Livewire\MapLocation;
 use App\Http\Controllers\KritikController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\MapController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\GeodiversityController;
+use App\Http\Controllers\BiodiversityController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +45,11 @@ Route::get('/spaces/data',[DataController::class,'spaces'])->name('data-space');
 Route::resource('/homepage', HomepageController::class);
 Route::resource('/map2', MapController::class);
 Route::resource('/kritik', KritikController::class);
+Route::resource('/dashboard', DashboardController::class);
+Route::resource('/geodiversity', GeodiversityController::class);
+Route::get('create-pdf',[GeodiversityController::class, 'createPDF'])->name('create-pdf');
+Route::resource('/biodiversity', BiodiversityController::class);
+Route::get('create-pdf',[BiodiversityController::class, 'createPDF'])->name('create-pdf');
 
 // Route::get('/kritik',[App\Http\Controllers\KritikController::class,'create'])->name('kritik.create');
 //Route::get('/kritik', function () {
