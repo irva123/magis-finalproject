@@ -10,6 +10,8 @@ use App\Http\Controllers\MapController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GeodiversityController;
 use App\Http\Controllers\BiodiversityController;
+use App\Http\Controllers\CulturaldiversityController;
+use App\Http\Controllers\GeoparkController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,6 +52,10 @@ Route::resource('/geodiversity', GeodiversityController::class);
 Route::get('create-pdf',[GeodiversityController::class, 'createPDF'])->name('create-pdf');
 Route::resource('/biodiversity', BiodiversityController::class);
 Route::get('create-pdf',[BiodiversityController::class, 'createPDF'])->name('create-pdf');
+Route::resource('/culturaldiversity', CulturaldiversityController::class);
+Route::get('create-pdf',[CulturaldiversityController::class, 'createPDF'])->name('create-pdf');
+
+Route::resource('/geopark', GeoparkController::class);
 
 // Route::get('/kritik',[App\Http\Controllers\KritikController::class,'create'])->name('kritik.create');
 //Route::get('/kritik', function () {

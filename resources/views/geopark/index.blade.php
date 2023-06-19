@@ -33,7 +33,7 @@ active
             <div class="card-header border-bottom pb-0">
               <div class="d-sm-flex align-items-center">
                 <div>
-                  <h6 class="font-weight-semibold text-lg mb-0">List Geodiversity</h6>
+                  <h6 class="font-weight-semibold text-lg mb-0">List Geopark</h6>
                 </div>
                 <div class="ms-auto d-flex">
                   <button type="button" class="btn btn-sm btn-white me-2">
@@ -46,7 +46,7 @@ active
                       </svg>
                     </span>
                     <span>
-                      <a href="/geodiversity/create" class="btn-inner--text">Add Product></a>
+                      <a href="/geopark/create" class="btn-inner--text">Add Product></a>
                     </span>
                   </button>
 
@@ -67,16 +67,19 @@ active
                 <table class="table align-items-center mb-0" id="myTable">
                   <thead class="bg-gray-100">
                     <tr>
-                      <th class="text-secondary text-xs font-weight-semibold opacity-7">Id</th>
+                      <th class="text-secondary text-xs font-weight-semibold opacity-7">Id Category</th>
                       <th class="text-secondary text-xs font-weight-semibold opacity-7">Nama</th>
                       <th class="text-secondary text-xs font-weight-semibold opacity-7">Foto</th>
                       <th class="text-secondary text-xs font-weight-semibold opacity-7">Deskripsi</th>
                       <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Alamat</th>
                       <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Titik koordinat</th>
+                      <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">link maps</th>
                       <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Operasional</th>
-                      <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Harga Tiket</th>
+                      <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Harga Weekday</th>
+                      <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Harga Weekend</th>
                       <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Kontak</th>
                       <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Sosial Media</th>
+                      <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Marker</th>
                       <th class="text-secondary opacity-7"></th>
                       <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Aksi</th>
                       <th class="text-secondary opacity-7 ps-2"></th>
@@ -86,7 +89,10 @@ active
                     @foreach ($spaces as $space)
                     <tr>
                     <td class="align-middle text-center text-sm">
-                        <p class="text-sm text-dark font-weight-semibold mb-0">{{ $space->id}}</p>
+                        <p class="text-sm text-dark font-weight-semibold mb-0">{{ $space->id_potensi}}</p>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <p class="text-sm text-dark font-weight-semibold mb-0">{{ $space->id_category}}</p>
                       </td>
                     <td class="align-middle text-center text-sm">
                         <p class="text-sm text-dark font-weight-semibold mb-0">{{ $space->nama}}</p>
@@ -103,6 +109,9 @@ active
                       <td class="align-middle text-center text-sm">
                         <p class="text-sm text-dark font-weight-semibold mb-0"> {{ $space->titik_koordinat}}</p>
                       </td>
+                      <td class="align-middle text-center text-sm">
+                        <p class="text-sm text-dark font-weight-semibold mb-0"> {{ $space->link_maps}}</p>
+                      </td>
                       <td class="align-middle text-center">
                         <span class="text-secondary text-sm font-weight-normal">{{ $space->jam_buka}}</span>
                       </td>
@@ -110,10 +119,16 @@ active
                         <span class="text-secondary text-sm font-weight-normal"> {{ $space->harga_weekday}}</span>
                       </td>
                       <td class="align-middle text-center">
+                        <span class="text-secondary text-sm font-weight-normal"> {{ $space->harga_weekend}}</span>
+                      </td>
+                      <td class="align-middle text-center">
                         <span class="text-secondary text-sm font-weight-normal">{{ $space->kontak}}</span>
                       </td>
                       <td class="align-middle text-center">
                       <span class="text-secondary text-sm font-weight-normal">{{ $space->sosmed}}</span>
+                      </td>
+                      <td class="align-middle text-center">
+                      <span class="text-secondary text-sm font-weight-normal">{{ $space->marker->marker}}</span>
                       </td>
                       <td class="align-middle text-center">
                       </td>

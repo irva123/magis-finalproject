@@ -154,7 +154,7 @@
                 .bindPopup(
                     "<div class='my-2'><img src='{{ url('storage/'.$item->foto) }}' class='img-fluid' width='700px'></div>" +
                     "<div class='my-2'><strong>Nama Space:</strong> <br>{{ $item->nama }}</div>" +
-                    "<div><a href='{{ route('map.show', $item->slug) }}' class='btn btn-outline-info btn-sm'>Read More</a></div>" +
+                    "<div><a href='{{ route('map.show', $item->nama) }}' class='btn btn-outline-info btn-sm'>Read More</a></div>" +
                     "<div class='my-2'></div>"
                 ).addTo(map);
         @endforeach
@@ -191,7 +191,7 @@
                 .bindPopup(
                     "<div class='my-2'><img src=''{{ url('storage/'.$item->foto) }}'' class='img-fluid' width='700px'></div>" +
                     "<div class='my-2'><strong>Nama Space:</strong> <br>{{ $item->nama }}</div>" +
-                    "<div><a href='{{ route('map.show', $item->slug) }}' class='btn btn-outline-info btn-sm'>Detail Space</a></div>" +
+                    "<div><a href='{{ route('map.show', $item->nama) }}' class='btn btn-outline-info btn-sm'>Detail Space</a></div>" +
                     "<div class='my-2'></div>"
                 ).addTo(map);
             @endforeach

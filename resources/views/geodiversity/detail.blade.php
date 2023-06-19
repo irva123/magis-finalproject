@@ -1,4 +1,4 @@
-@extends('layout.main')
+@extends('layout-admin.main')
 
 @section('judul')
 Tables
@@ -23,56 +23,119 @@ active
               <div class="flex-shrink-0">
               <div class="d-flex justify-content-start rounded-3 mb-2 pt-5 pb-5 mt-5 me-3"
                   style="background-color: #efefef;">
-                <img src ="{{ url('storage/'.$tables_mobil->foto) }}"
+                <img src ="{{ url('storage/'.$geodiversity->foto) }}"
                   alt="Generic placeholder image" class="img-fluid"
                   style="width: 200px; border-radius: 10px;">
                   </div>
               </div>
-              <div class="col-lg-8">
+              <div class="col-lg-10">
               <div class="card mb-4">
                 <div class="card-body">
                   <div class="row">
                     <div class="col-sm-3">
-                      <p class="mb-0">Plat Nomor</p>
+                      <p class="mb-0">Id Category</p>
                     </div>
                     <div class="col-sm-9">
-                      <p class="text-muted mb-0">: {{ $tables_mobil->plat_nomor }}</p>
+                      <p class="text-muted mb-0">: {{ $geodiversity->id_category }}</p>
                     </div>
                   </div>
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <p class="mb-0">Jenis Mobil</p>
+                      <p class="mb-0">Nama</p>
                     </div>
                     <div class="col-sm-9">
-                      <p class="text-muted mb-0">: {{ $tables_mobil->jenis_mobil }}</p>
+                      <p class="text-muted mb-0">: {{ $geodiversity->nama }}</p>
                     </div>
                   </div>
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <p class="mb-0">Merk</p>
+                      <p class="mb-0">Deskripsi</p>
                     </div>
                     <div class="col-sm-9">
-                      <p class="text-muted mb-0">: {{ $tables_mobil->merk }}</p>
+                      <p class="text-muted mb-0">: {{ $geodiversity->deskripsi }}</p>
                     </div>
                   </div>
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <p class="mb-0">Kapasitas</p>
+                      <p class="mb-0">Alamat</p>
                     </div>
                     <div class="col-sm-9">
-                      <p class="text-muted mb-0">: {{ $tables_mobil->kapasitas }}</p>
+                      <p class="text-muted mb-0">: {{ $geodiversity->alamat }}</p>
                     </div>
                   </div>
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <p class="mb-0">Tahun</p>
+                      <p class="mb-0">Titik Koordinat</p>
                     </div>
                     <div class="col-sm-9">
-                      <p class="text-muted mb-0">: {{ $tables_mobil->tahun }}</p>
+                      <p class="text-muted mb-0">: {{ $geodiversity->titik_koordinat }}</p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Link Maps</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0">: {{ $geodiversity->link_maps }}</p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Jam Operasional</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0">: {{ $geodiversity->jam_buka }}</p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Harga Weekday</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0">: {{ $geodiversity->harga_weekday }}</p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Harga Weekend</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0">: {{ $geodiversity->harga_weekend}}</p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Kontak</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0">: {{ $geodiversity->kontak }}</p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Sosial Media</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0">: {{ $geodiversity->sosmed }}</p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Marker</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0">: {{ $geodiversity->id_marker }}</p>
                     </div>
                   </div>
                 </div>

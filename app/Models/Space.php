@@ -11,22 +11,19 @@ class Space extends Model
     protected $table = 'spaces';
     protected $guarded = ['id'];
     protected $fillable = [
-        'id',
         'id_category',
         'nama',
-        'slug',
         'foto',
         'deskripsi',
         'alamat',
         'titik_koordinat',
+        'link_maps',
         'jam_buka',
         'harga_weekday',
         'harga_weekend',
         'kontak',
         'sosmed',
-        'marker',
-        'created_at',
-        'updated_at',
+        'id_marker',
     ];
     public function category()
     {
