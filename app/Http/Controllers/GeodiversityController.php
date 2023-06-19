@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\Space;
 use App\Models\MarkerModel;
 use App\Models\CategoryModel;
+use App\Http\Requests\StoreGeoparkRequest;
+use App\Http\Requests\UpdateGeoparkRequest;
 use PDF;
 
 class GeodiversityController extends Controller
@@ -18,9 +20,11 @@ class GeodiversityController extends Controller
      */
     public function index()
     {
-        $spaces = Space::with('category')->where('id_category', 'GP02')->get();
-        $category = CategoryModel::get();
-        return view('geodiversity.index', ['spaces'=>$spaces, 'category'=>$category]);
+        $spaces = Space::with('category')->where('id_category', '2')->get();
+        return view('geodiversity.index', ['spaces'=>$spaces]);
+
+        // $spaces = Space::with('category')->get();
+        // return view('geodiversity.index', ['spaces'=>$spaces]);
     }
 
     /**
@@ -30,7 +34,9 @@ class GeodiversityController extends Controller
      */
     public function create()
     {
-        return view('geodiversity.create',['marker'=> MarkerModel::all()]);
+        $category = CategoryModel::all();
+        return view('geodiversity.create',['marker'=> MarkerModel::all()], compact('category'));
+
     }
 
     /**
@@ -39,9 +45,22 @@ class GeodiversityController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreGeoparkRequest $request)
     {
-        //
+        $data=$request->all();
+
+        $file = $request->file('foto');
+
+        $nama_file = time().'_'.$file->getClientOriginalName();
+        $tujuan_upload = 'storage';
+        $file->move($tujuan_upload,$nama_file);
+        $data['foto'] = $nama_file;
+
+        //add data 
+        Space::create($data); 
+ 
+        // if true, redirect to index 
+        return redirect('/geodiversity') ->with('success', 'Add data success!');
     }
 
     /**
@@ -50,7 +69,7 @@ class GeodiversityController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Space $geodiversity)
     {
         return view('geodiversity.detail', compact('geodiversity'));
     }
@@ -61,10 +80,11 @@ class GeodiversityController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Space $geodiversity)
     {
         $marker = MarkerModel::get();
-        return view('geodiversity.edit', compact(['marker', 'geodiversity']));
+        $category = CategoryModel::get();
+        return view('geodiversity.edit', compact(['marker', 'geodiversity']), compact(['category', 'geodiversity']));
     }
 
     /**
@@ -74,9 +94,17 @@ class GeodiversityController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateGeoparkRequest $request, Space $geodiversity)
     {
-        //
+        $data=$request->all();
+        $file = $request->file('foto');
+
+        $nama_file = time().'_'.$file->getClientOriginalName();
+        $tujuan_upload = 'storage';
+        $file->move($tujuan_upload,$nama_file);
+        $data['foto'] = $nama_file;
+        $geodiversity->update($data);
+        return redirect()->route('geodiversity.index')->with('success', 'data berhasil disimpan!');
     }
 
     /**
@@ -85,7 +113,7 @@ class GeodiversityController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Space $geodiversity)
     {
         $geodiversity->delete($geodiversity->id);
         return redirect()->route('geodiversity.index')->with('success', 'data berhasil dihapus!');

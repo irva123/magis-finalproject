@@ -24,7 +24,7 @@ class MapController extends Controller
         //return dd($spaces);
     }
 
-    public function show($slug)
+    public function show($nama)
     {
         /**
          * Hampir sama dengam method index diatas
@@ -34,7 +34,7 @@ class MapController extends Controller
          * yang kita pilih
          */
         $centrePoint = CentrePoint::get()->first();
-        $spaces = Space::where('slug',$slug)->first();
+        $spaces = Space::where('nama',$nama)->first();
         return view('detail',[
             'centrePoint' => $centrePoint,
             'spaces' => $spaces

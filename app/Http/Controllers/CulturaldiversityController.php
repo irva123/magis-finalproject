@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Kritik;
+use App\Models\Space;
+use App\Models\MarkerModel;
+use App\Models\CategoryModel;
+use PDF;
 
-class KritikController extends Controller
+class CulturaldiversityController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +18,9 @@ class KritikController extends Controller
      */
     public function index()
     {
-        $kritik = Kritik::get();
-        return view('kritik&saran.kritik',['kritik_dan_saran'=>$kritik ]);  
+        $spaces = Space::with('category')->where('id_category', 'GP04')->get();
+        $category = CategoryModel::get();
+        return view('cultural-diversity.index', ['spaces'=>$spaces, 'category'=>$category]);
     }
 
     /**
@@ -26,7 +30,7 @@ class KritikController extends Controller
      */
     public function create()
     {
-        return view('kritik&saran.create');
+        return view('cultural-diversity.create',['marker'=> MarkerModel::all()]);
     }
 
     /**
@@ -37,10 +41,7 @@ class KritikController extends Controller
      */
     public function store(Request $request)
     {
-       Kritik::create($request->all()); 
- 
-        // if true, redirect to index 
-        return redirect()->route('kritik.index') ->with('success', 'Add data success!'); 
+        //
     }
 
     /**
@@ -51,7 +52,7 @@ class KritikController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('cultural-diversity.detail', compact('cultural-diversity'));
     }
 
     /**
@@ -62,7 +63,8 @@ class KritikController extends Controller
      */
     public function edit($id)
     {
-        //
+        $marker = MarkerModel::get();
+        return view('cultural-diversity.edit', compact(['marker', 'cultural-diversity']));
     }
 
     /**
@@ -85,6 +87,14 @@ class KritikController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $culturaldiversity->delete($cultualdiversity->id);
+        return redirect()->route('cultural-diversity.index')->with('success', 'data berhasil dihapus!');
+    }
+
+    public function createPDF(){
+        $geodiversity = Space::all();
+        $pdf = PDF::loadView('cultural-diversity.templatePDF', compact('culturaliversity'));
+        return $pdf->download('Data_cultural-diversity.pdf');
+
     }
 }

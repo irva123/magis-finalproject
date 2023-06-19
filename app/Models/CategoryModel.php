@@ -11,7 +11,6 @@ use HasFactory;
 protected $table = 'category';
 protected $guarded = ['id'];
 protected $fillable = [
-    'id',
     'nama',
     'foto',
     'deskripsi',

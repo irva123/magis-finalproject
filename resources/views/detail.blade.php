@@ -57,16 +57,15 @@
                         <img class="img-fluid" width="200" src="{{ url('storage/'.$spaces->foto) }}"
                             alt="">
                         </p>
+
+                        <p>
+                        <h4>
+                            <strong>Peta</strong>
+                        </h4>
+                            <div class=""><iframe style="border: 0;" src="{{ $spaces->link_maps }}" allowfullscreen="allowfullscreen"><span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start"></span></iframe></div></p>
                     </div>
                     <div class="card-footer">
                         <a href="/map2" class="btn btn-outline-primary">Kembali</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-xs-6">
-                <div class="card">
-                    <div class="card-body">
-                        <div id="map"></div>
                     </div>
                 </div>
             </div>
@@ -74,61 +73,7 @@
     </div>
     {{-- karena hanya akan menampilkan single data dari marker yang dipilih jadi kita tidak 
     melakukan looping untuk halaman detail ini --}}
-    <script>
-        var map = L.map('map').setView([-8.351620144146487, 112.40159750298284
-    ], 10);
-
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-        // var mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
-        //     'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        //      mbUrl =
-        //     'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZXJpcHJhdGFtYSIsImEiOiJjbGZubmdib3UwbnRxM3Bya3M1NGE4OHRsIn0.oxYqbBbaBwx0dHLguu5gOA';
-        // var satellite = L.tileLayer(mbUrl, {
-        //         id: 'mapbox/satellite-v9',
-        //         tileSize: 512,
-        //         zoomOffset: -1,
-        //         attribution: mbAttr
-        //     }),
-        //     dark = L.tileLayer(mbUrl, {
-        //         id: 'mapbox/dark-v10',
-        //         tileSize: 512,
-        //         zoomOffset: -1,
-        //         attribution: mbAttr
-        //     }),
-        //     streets = L.tileLayer(mbUrl, {
-        //         id: 'mapbox/streets-v11',
-        //         tileSize: 512,
-        //         zoomOffset: -1,
-        //         attribution: mbAttr
-        //     });
-        var data{{ $spaces->id }} = L.layerGroup()
-        var map = L.map('map', {
-            center: [{{ $spaces->location }}],
-            zoom: 20,
-            fullscreenControl: {
-                pseudoFullscreen: false
-            },
-            layers: [streets, data{{ $spaces->id }}]
-        });
-        var baseLayers = {
-            "Streets": streets,
-            "Satellite": satellite,
-            "Dark": dark,
-        };
-        var overlays = {
-            //"Streets": streets
-            "{{ $spaces->name }}": data{{ $spaces->id }},
-        };
-        L.control.layers(baseLayers, overlays).addTo(map);
-        var curLocation = [{{ $spaces->location }}];
-        map.attributionControl.setPrefix(false);
-        var marker = new L.marker(curLocation, {
-            draggable: 'false',
-        });
-        map.addLayer(marker);
-    </script>
+    
 </body>
 
 </html>

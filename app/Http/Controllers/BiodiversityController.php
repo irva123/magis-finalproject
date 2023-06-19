@@ -18,7 +18,7 @@ class BiodiversityController extends Controller
      */
     public function index()
     {
-        $spaces = Space::with('category')->where('id_category', 'GP03')->get();
+        $spaces = Space::with('category')->where('id_category', '3')->get();
         $category = CategoryModel::get();
         return view('biodiversity.index', ['spaces'=>$spaces, 'category'=>$category]);
     }

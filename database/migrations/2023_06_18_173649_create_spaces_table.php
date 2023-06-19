@@ -14,13 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('spaces', function (Blueprint $table) {
-            $table->string('id')->primary();
-            $table->string('id_category');
+            $table->id();
+            $table->unsignedBigInteger('id_category');
             $table->string('nama');
             $table->string('foto')->nullable();
             $table->longText('deskripsi');
             $table->string('alamat');
             $table->string('titik_koordinat');
+            $table->string('link_maps');
             $table->string('jam_buka');
             $table->integer('harga_weekday');
             $table->integer('harga_weekend');

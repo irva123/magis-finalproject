@@ -4,8 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Space;
+use App\Models\MarkerModel;
+use App\Models\CategoryModel;
+use App\Http\Requests\StoreGeoparkRequest;
+use App\Http\Requests\UpdateGeodiversityRequest;
+use PDF;
 
-class CulturaldiveristyController extends Controller
+class GeoparkController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +20,8 @@ class CulturaldiveristyController extends Controller
      */
     public function index()
     {
-        //
+        $spaces = Space::with('category')->get();
+        return view('geopark.index', ['spaces'=>$spaces]);
     }
 
     /**
@@ -24,7 +31,7 @@ class CulturaldiveristyController extends Controller
      */
     public function create()
     {
-        //
+        return view('geopark.create',['marker'=> MarkerModel::all()]);
     }
 
     /**
@@ -33,9 +40,22 @@ class CulturaldiveristyController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreGeoparkRequest $request)
     {
-        //
+        $data=$request->all();
+
+        $file = $request->file('foto');
+
+        $nama_file = time().'_'.$file->getClientOriginalName();
+        $tujuan_upload = 'storage';
+        $file->move($tujuan_upload,$nama_file);
+        $data['foto'] = $nama_file;
+
+        //add data 
+        Space::create($data); 
+ 
+        // if true, redirect to index 
+        return redirect('/geopark') ->with('success', 'Add data success!');
     }
 
     /**

@@ -1,5 +1,5 @@
 <body class="g-sidenav-show  bg-gray-100">
-  <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 fixed-start full-background " id="sidenav-main" style="background-image: url('../assets/img/sidebar.jpeg')">
+  <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 fixed-start full-background " id="sidenav-main" style="background: linear-gradient(166.79deg, #00FFF0 1.74%, rgba(37, 18, 254, 0.69) 47.73%, rgba(31, 44, 162, 0.86) 76.72%, #E700FB 98.3%);">
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand d-flex align-items-center m-0" href=" https://demos.creative-tim.com/corporate-ui-dashboard/pages/dashboard.html " target="_blank">
@@ -41,7 +41,8 @@
                 </g>
               </svg>
             </div>
-            <span class="nav-link-text ms-1">Geopark</span>
+            <a class="" href="/geopark" >
+            <span class="nav-link-text ms-1" >Geopark</span>
           </a>
         </li>
         <li class="nav-item border-start my-0 pt-2">
@@ -55,7 +56,7 @@
           </a>
         </li>
         <li class="nav-item border-start my-0 pt-2">
-          <a class="nav-link position-relative ms-0 ps-2 py-2 " href="../pages/sign-in.html">
+          <a class="nav-link position-relative ms-0 ps-2 py-2 " href="/culturaldiversity">
             <span class="nav-link-text ms-1">Data Cultural Diversity</span>
           </a>
         </li>

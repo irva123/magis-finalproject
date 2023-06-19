@@ -94,7 +94,7 @@ active
                       <td class="align-middle text-center">
                         <span class="text-secondary text-sm font-weight-normal"><img src ="{{ url('storage/'.$space->foto) }}" alt ="" style="width: 150px;"></span>
                       </td>
-                      <td class="align-middle text-center text-sm">
+                      <td class="align-middle text-sm">
                         <p class="text-sm text-dark font-weight-semibold mb-0">{{ $space->deskripsi}}</p>
                       </td>
                       <td class="align-middle text-center text-sm">
