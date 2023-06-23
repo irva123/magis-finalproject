@@ -601,7 +601,7 @@ div#news-slider .owl-next {
 */
 
 .navbar.active {
-  background: #333333;
+  background: #A5C9CA;
   border-radius: 0px;
   padding-bottom: 10px;
   box-shadow: 0 10px 15px rgba(25,25,25,0.1);
@@ -623,7 +623,7 @@ div#news-slider .owl-next {
 }
 
 .navbar .nav-link {
-  color: #fff !important;
+  color: #2E4F4F !important;
 }
 
 .navbar .nav-link:hover,

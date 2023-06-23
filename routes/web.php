@@ -12,6 +12,7 @@ use App\Http\Controllers\GeodiversityController;
 use App\Http\Controllers\BiodiversityController;
 use App\Http\Controllers\CulturaldiversityController;
 use App\Http\Controllers\GeoparkController;
+use App\Http\Controllers\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,6 +57,9 @@ Route::resource('/culturaldiversity', CulturaldiversityController::class);
 Route::get('create-pdf',[CulturaldiversityController::class, 'createPDF'])->name('create-pdf');
 
 Route::resource('/geopark', GeoparkController::class);
+
+Route::resource('/even', EventController::class);
+
 
 // Route::get('/kritik',[App\Http\Controllers\KritikController::class,'create'])->name('kritik.create');
 //Route::get('/kritik', function () {
