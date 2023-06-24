@@ -27,6 +27,7 @@ class UpdateEventRequest extends FormRequest
             'nama' => 'required',
             'foto' => 'required|file|image|mimes:jpeg,png,jpg',
             'deskripsi' => 'required',
+            'deskripsi' => 'required',
             'alamat_kegiatan' => 'required',
             'waktu_kegiatan' => 'required',
             'penyelenggara_kegiatan' => 'required',

@@ -29,7 +29,7 @@ active
                 @if(old('id_event') == $event->id)
                     <option value="{{$event->id}}" selected>{{ $event->nama }}</option>
                 @else 
-                    <option value="{{$event->id}}">{{ $event->nama }}</option>
+
                 @endif
                 @endforeach
                 </select></br>
@@ -120,4 +120,4 @@ active
         </div>
         </div>
         </div>
-        @endsection
+@endsection
