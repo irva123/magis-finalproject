@@ -1090,7 +1090,10 @@ div#news-slider .owl-next {
       text-align: center;  
 }
   
-  
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
   
   .wrap-input100 {
     width: 100%;

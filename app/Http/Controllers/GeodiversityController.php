@@ -18,10 +18,13 @@ class GeodiversityController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $pagination = 10;
+        $spaces = Space::OrderBy('created_at', 'desc')-> paginate($pagination);
+
         $spaces = Space::with('category')->where('id_category', '2')->get();
-        return view('geodiversity.index', ['spaces'=>$spaces]);
+        return view('geodiversity.index', ['spaces'=>$spaces])->with('i', ($request->input('page',1)-1)* $pagination);
 
         // $spaces = Space::with('category')->get();
         // return view('geodiversity.index', ['spaces'=>$spaces]);
@@ -119,9 +122,12 @@ class GeodiversityController extends Controller
         return redirect()->route('geodiversity.index')->with('success', 'data berhasil dihapus!');
     }
 
-    public function createPDF(){
-        $geodiversity = Space::all();
-        $pdf = PDF::loadView('geodiversity.templatePDF', compact('geodiversity'));
+    public function createPDF(Request $request){
+        //$spaces = Space::all();
+        $pagination = 10;
+        $spaces = Space::OrderBy('created_at', 'desc')-> paginate($pagination);
+        $spaces = Space::with('category')->where('id_category', '2')->get();
+        $pdf = PDF::loadView('geodiversity.templatePDF', compact('spaces'))->setPaper('a4', 'landscape');
         return $pdf->download('Data_geodiversity.pdf');
 
     }

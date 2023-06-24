@@ -12,6 +12,7 @@ use App\Http\Controllers\GeodiversityController;
 use App\Http\Controllers\BiodiversityController;
 use App\Http\Controllers\CulturaldiversityController;
 use App\Http\Controllers\GeoparkController;
+use App\Http\Controllers\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,18 +44,20 @@ Route::resource('space',(SpaceController::class));
 
 Route::get('/centrepoint/data',[DataController::class,'centrepoint'])->name('centre-point.data');
 Route::get('/spaces/data',[DataController::class,'spaces'])->name('data-space');
+Route::get('create-pdf1',[GeodiversityController::class, 'createPDF'])->name('create-pdf1');
+Route::get('create-pdf2',[BiodiversityController::class, 'createPDF'])->name('create-pdf2');
+Route::get('create-pdf3',[CulturaldiversityController::class, 'createPDF'])->name('create-pdf3');
+Route::get('create-pdf4',[EventController::class, 'createPDF'])->name('create-pdf4');
+Route::get('create-pdf',[GeoparkController::class, 'createPDF'])->name('create-pdf');
 
 Route::resource('/homepage', HomepageController::class);
 Route::resource('/map2', MapController::class);
 Route::resource('/kritik', KritikController::class);
 Route::resource('/dashboard', DashboardController::class);
 Route::resource('/geodiversity', GeodiversityController::class);
-Route::get('create-pdf',[GeodiversityController::class, 'createPDF'])->name('create-pdf');
 Route::resource('/biodiversity', BiodiversityController::class);
-Route::get('create-pdf',[BiodiversityController::class, 'createPDF'])->name('create-pdf');
 Route::resource('/culturaldiversity', CulturaldiversityController::class);
-Route::get('create-pdf',[CulturaldiversityController::class, 'createPDF'])->name('create-pdf');
-
+Route::resource('/event', EventController::class);
 Route::resource('/geopark', GeoparkController::class);
 
 // Route::get('/kritik',[App\Http\Controllers\KritikController::class,'create'])->name('kritik.create');

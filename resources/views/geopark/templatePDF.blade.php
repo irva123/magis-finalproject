@@ -11,50 +11,58 @@
                   <thead class="bg-gray-100">
                     <tr>
                       <th class="text-secondary text-xs font-weight-semibold opacity-7">No</th>
-                      <th class="text-secondary text-xs font-weight-semibold opacity-7">Plat Nomor</th>
-                      <th class="text-secondary text-xs font-weight-semibold opacity-7">Jenis Mobil</th>
-                      <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Merk</th>
-                      <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Kapasitas</th>
-                      <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Tahun Beli</th>
-                      <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Tarif/hari</th>
-                      <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Foto</th>
-                      <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Status</th>
-                      <th class="text-secondary opacity-7 ps-2"></th>
+                      <th class="text-secondary text-xs font-weight-semibold opacity-7">Nama</th>
+                      <th class="text-secondary text-xs font-weight-semibold opacity-7">Foto</th>
+                      <th class="text-secondary text-xs font-weight-semibold opacity-7">Deskripsi</th>
+                      <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Alamat</th>
+                      <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Titik koordinat</th>
+                      <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Jam Operasional</th>
+                      <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Harga Tiket</th>
+                      <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Kontak</th>
+                      <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Sosial Media</th>
+                      <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Warna Marker</th>
+                      <th class="text-secondary opacity-7"></th>
                     </tr>
                   </thead>
                   <tbody>
-                    @foreach ($mobil as $mobils)
+                    @foreach ($spaces as $space)
                     <tr>
                     <td class="align-middle text-center text-sm">
-                        <p class="text-sm text-dark font-weight-semibold mb-0">{{ $mobils->id }}</p>
+                        <p class="text-sm text-dark font-weight-semibold mb-0">{{ $space->id}}</p>
+                      </td>
+                    <td class="align-middle text-center text-sm">
+                        <p class="text-sm text-dark font-weight-semibold mb-0">{{ $space->nama}}</p>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-sm font-weight-normal"><img src ="{{ public_path('storage/'.$space->foto) }}" alt ="" style="width: 150px;"></span>
                       </td>
                       <td class="align-middle text-center text-sm">
-                        <p class="text-sm text-dark font-weight-semibold mb-0">{{ $mobils->plat_nomor }}</p>
+                        <p class="text-sm text-dark font-weight-semibold mb-0">{{ $space->deskripsi}}</p>
                       </td>
                       <td class="align-middle text-center text-sm">
-                        <p class="text-sm text-dark font-weight-semibold mb-0">{{ $mobils->jenis_mobil }}</p>
+                        <p class="text-sm text-dark font-weight-semibold mb-0">{{ $space->alamat}}</p>
                       </td>
                       <td class="align-middle text-center text-sm">
-                        <p class="text-sm text-dark font-weight-semibold mb-0">{{ $mobils->merk }}</p>
+                        <p class="text-sm text-dark font-weight-semibold mb-0"> {{ $space->titik_koordinat}}</p>
                       </td>
                       <td class="align-middle text-center">
-                        <span class="text-secondary text-sm font-weight-normal">{{ $mobils->kapasitas }}</span>
+                        <span class="text-secondary text-sm font-weight-normal">{{ $space->jam_buka}}</span>
                       </td>
                       <td class="align-middle text-center">
-                        <span class="text-secondary text-sm font-weight-normal">{{ $mobils->tahun }}</span>
+                        <span class="text-secondary text-sm font-weight-normal"> {{ $space->harga_weekday}}</span>
                       </td>
                       <td class="align-middle text-center">
-                        <span class="text-secondary text-sm font-weight-normal">{{ $mobils->tarif }}</span>
+                        <span class="text-secondary text-sm font-weight-normal">{{ $space->kontak}}</span>
                       </td>
                       <td class="align-middle text-center">
-                        <span class="text-secondary text-sm font-weight-normal"><img src ="{{ public_path('storage/'.$mobils->foto) }}" alt ="" style="width: 150px;"></span>
+                      <span class="text-secondary text-sm font-weight-normal">{{ $space->sosmed}}</span>
                       </td>
                       <td class="align-middle text-center">
-                      <span class="text-secondary text-sm font-weight-normal">{{ $mobils->status->status_mobil }}</span>
+                      <span class="text-secondary text-sm font-weight-normal">{{ $space->marker->marker}}</span>
                       </td>
                       <td class="align-middle text-center">
                       </td>
-                        <td class="align-middle">
+                      <td class="align-middle">
                       </td>
                     </tr>
                     @endforeach

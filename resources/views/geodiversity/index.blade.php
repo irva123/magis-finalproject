@@ -37,7 +37,7 @@ active
                 </div>
                 <div class="ms-auto d-flex">
                   <button type="button" class="btn btn-sm btn-white me-2">
-                    View all
+                  <a href="/geopark/"> View all </a>
                   </button>
                   <button type="button" class="btn btn-sm btn-dark btn-icon d-flex align-items-center me-2">
                     <span class="btn-inner--icon">
@@ -51,7 +51,7 @@ active
                   </button>
 
                   {{-- tombol Ekspor PDF --}}
-                  <form action="{{route('create-pdf')}}"class="d-inline">
+                  <form action="{{route('create-pdf1')}}"class="d-inline">
                     <button class="btn btn-outline-info  btn-icon-split">
                       <span class="icon text-white-50">
                         <i class="fas fa-download"></i>
@@ -67,7 +67,7 @@ active
                 <table class="table align-items-center mb-0" id="myTable">
                   <thead class="bg-gray-100">
                     <tr>
-                      <th class="text-secondary text-xs font-weight-semibold opacity-7">Id</th>
+                      <th class="text-secondary text-xs font-weight-semibold opacity-7">No</th>
                       <th class="text-secondary text-xs font-weight-semibold opacity-7">Nama</th>
                       <th class="text-secondary text-xs font-weight-semibold opacity-7">Foto</th>
                       <th class="text-secondary text-xs font-weight-semibold opacity-7">Deskripsi</th>
@@ -83,10 +83,11 @@ active
                     </tr>
                   </thead>
                   <tbody>
+                    @if ($spaces->count() > 0)
                     @foreach ($spaces as $space)
                     <tr>
                     <td class="align-middle text-center text-sm">
-                        <p class="text-sm text-dark font-weight-semibold mb-0">{{ $space->id}}</p>
+                        <p class="text-sm text-dark font-weight-semibold mb-0">{{ ++$i }}</p>
                       </td>
                     <td class="align-middle text-center text-sm">
                         <p class="text-sm text-dark font-weight-semibold mb-0">{{ $space->nama}}</p>
@@ -141,6 +142,7 @@ active
                       </td>
                     </tr>
                     @endforeach
+                    @endif
                   </tbody>
                 </table>
               </div>

@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\Space;
 use App\Models\MarkerModel;
 use App\Models\CategoryModel;
+use App\Http\Requests\StoreGeoparkRequest;
+use App\Http\Requests\UpdateGeoparkRequest;
 use PDF;
 
 class CulturaldiversityController extends Controller
@@ -16,11 +18,14 @@ class CulturaldiversityController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $spaces = Space::with('category')->where('id_category', 'GP04')->get();
+        $pagination = 10;
+        $spaces = Space::OrderBy('created_at', 'desc')-> paginate($pagination);
+
+        $spaces = Space::with('category')->where('id_category', '4')->get();
         $category = CategoryModel::get();
-        return view('cultural-diversity.index', ['spaces'=>$spaces, 'category'=>$category]);
+        return view('culturaldiversity.index', ['spaces'=>$spaces, 'category'=>$category])->with('i', ($request->input('page',1)-1)* $pagination);
     }
 
     /**
@@ -30,7 +35,8 @@ class CulturaldiversityController extends Controller
      */
     public function create()
     {
-        return view('cultural-diversity.create',['marker'=> MarkerModel::all()]);
+        $category = CategoryModel::all();
+        return view('culturaldiversity.create',['marker'=> MarkerModel::all()], compact('category'));
     }
 
     /**
@@ -39,9 +45,22 @@ class CulturaldiversityController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreGeoparkRequest $request)
     {
-        //
+        $data=$request->all();
+
+        $file = $request->file('foto');
+
+        $nama_file = time().'_'.$file->getClientOriginalName();
+        $tujuan_upload = 'storage';
+        $file->move($tujuan_upload,$nama_file);
+        $data['foto'] = $nama_file;
+
+        //add data 
+        Space::create($data); 
+ 
+        // if true, redirect to index 
+        return redirect('/culturaldiversity') ->with('success', 'Add data success!');
     }
 
     /**
@@ -50,9 +69,9 @@ class CulturaldiversityController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Space $culturaldiversity)
     {
-        return view('cultural-diversity.detail', compact('cultural-diversity'));
+        return view('culturaldiversity.detail', compact('culturaldiversity'));
     }
 
     /**
@@ -61,10 +80,11 @@ class CulturaldiversityController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Space $culturaldiversity)
     {
         $marker = MarkerModel::get();
-        return view('cultural-diversity.edit', compact(['marker', 'cultural-diversity']));
+        $category = CategoryModel::get();
+        return view('culturaldiversity.edit', compact(['marker', 'culturaldiversity']), compact(['category', 'culturaldiversity']));
     }
 
     /**
@@ -74,9 +94,17 @@ class CulturaldiversityController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateGeoparkRequest $request, Space $culturaldiversity)
     {
-        //
+        $data=$request->all();
+        $file = $request->file('foto');
+
+        $nama_file = time().'_'.$file->getClientOriginalName();
+        $tujuan_upload = 'storage';
+        $file->move($tujuan_upload,$nama_file);
+        $data['foto'] = $nama_file;
+        $culturaldiversity->update($data);
+        return redirect()->route('culturaldiversity.index')->with('success', 'data berhasil disimpan!');
     }
 
     /**
@@ -85,15 +113,15 @@ class CulturaldiversityController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Space $culturaldiversity)
     {
-        $culturaldiversity->delete($cultualdiversity->id);
-        return redirect()->route('cultural-diversity.index')->with('success', 'data berhasil dihapus!');
+        $culturaldiversity->delete($culturaldiversity->id);
+        return redirect()->route('culturaldiversity.index')->with('success', 'data berhasil dihapus!');
     }
 
     public function createPDF(){
-        $geodiversity = Space::all();
-        $pdf = PDF::loadView('cultural-diversity.templatePDF', compact('culturaliversity'));
+        $spaces = Space::with('category')->where('id_category', '4')->get();
+        $pdf = PDF::loadView('culturaldiversity.templatePDF', compact('spaces'))->setPaper('a4', 'landscape');
         return $pdf->download('Data_cultural-diversity.pdf');
 
     }

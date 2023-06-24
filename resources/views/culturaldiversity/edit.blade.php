@@ -36,16 +36,16 @@ active
           <div class=" ml-5 mb-2 pt-4 px-3">
               <div class="d-sm-flex align-items-center">
             <div class="col-lg-10">        
-            <form method="post" action="{{ route('biodiversity.update', $biodiversity->id) }}" enctype= multipart/form-data>
+            <form method="post" action="{{ route('culturaldiversity.update', $culturaldiversity->id) }}" enctype= multipart/form-data>
             @method ('PUT')    
             @csrf
-                <div class="row">
+            <div class="row">
                 <div class=" col-6">
                 <label for="id_category">Jenis Potensi</label>
                 <select class="form-select" name="id_category">
                 @foreach($category as $category)
-                    <option @selected($category->id == $biodiversity->id_category) value="{{$category->id}}"  @class([
-                'bg-purple-600 text-white' => $category->id == $biodiversity->id_category ])> {{ $category->nama }}</option>
+                    <option @selected($category->id == $culturaldiversity->id_category) value="{{$category->id}}"  @class([
+                'bg-purple-600 text-white' => $category->id == $culturaldiversity->id_category ])> {{ $category->nama }}</option>
                 
                 @endforeach
                 </select></br>
@@ -54,8 +54,8 @@ active
                 <label for="id_marker">Warna Marker</label>
                 <select class="form-select" name="id_marker">
                 @foreach($marker as $marker)
-                <option @selected($marker->id == $biodiversity->id_marker) value="{{$marker->id}}"  @class([
-                'bg-purple-600 text-white' => $marker->id == $biodiversity->id_marker ])> {{ $marker->marker }}</option>
+                <option @selected($marker->id == $culturaldiversity->id_marker) value="{{$marker->id}}"  @class([
+                'bg-purple-600 text-white' => $marker->id == $culturaldiversity->id_marker ])> {{ $marker->marker }}</option>
                 
                 @endforeach
                 </select></br>
@@ -66,7 +66,7 @@ active
                 <div class="col-6">
                     <label for="nama" class="form-label">Nama</label>
                     <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" 
-                    name="nama" value = "{{ $biodiversity->nama}}">
+                    name="nama" value = "{{ $culturaldiversity->nama}}">
                 @error('nama')
                 <div class="invalid-feedback">
                     {{ $messages }}
@@ -77,11 +77,11 @@ active
                 <div class="col-6">
                 <label for="foto" class="form-label">Foto</label>
                 <div class="col-md-12 mb-2">
-                    <img id="preview-image-before-upload" src="{{ url('storage/'.$biodiversity->foto) }}"
+                    <img id="preview-image-before-upload" src="{{ url('storage/'.$culturaldiversity->foto) }}"
                     alt="preview image" style="max-height: 150px;">
                 </div>
                 <input class="form-control @error('foto') is-invalid @enderror" type="file" id="foto" 
-                name="foto" value = "{{ $biodiversity->foto }}">
+                name="foto" value = "{{ $culturaldiversity->foto }}">
                 @error('foto')
                 <div class="invalid-feedback">
                 {{ $message }}
@@ -94,7 +94,7 @@ active
                 <div class="mb-3 col-6">
                     <label for="alamat" class="form-label">Alamat</label>
                     <input type="text" class="form-control @error('alamat') is-invalid @enderror" id="alamat" 
-                    name="alamat" value = "{{ $biodiversity->alamat}}">
+                    name="alamat" value = "{{ $culturaldiversity->alamat}}">
                 @error('alamat')
                 <div class="invalid-feedback">
                 {{ $messages }}
@@ -105,7 +105,7 @@ active
                 <div class="mb-3 col-6">
                     <label for="titik_koordinat" class="form-label">Titik Koordinat</label>
                     <input type="text" class="form-control @error('titik_koordinat') is-invalid @enderror" id="titik_koordinat" 
-                    name="titik_koordinat" value = "{{ $biodiversity->titik_koordinat}}">
+                    name="titik_koordinat" value = "{{ $culturaldiversity->titik_koordinat}}">
                 @error('titik_koordinat')
                 <div class="invalid-feedback">
                 {{ $messages }}
@@ -118,7 +118,7 @@ active
                 <div class="mb-3 col-6">
                     <label for="link_maps" class="form-label">Link Maps</label>
                     <input type="text" class="form-control @error('link_maps') is-invalid @enderror" id="link_maps" 
-                    name="link_maps" value = "{{ $biodiversity->link_maps}}">
+                    name="link_maps" value = "{{ $culturaldiversity->link_maps}}">
                 @error('link_maps')
                 <div class="invalid-feedback">
                 {{ $messages }}
@@ -129,7 +129,7 @@ active
                 <div class="mb-3 col-6">
                     <label for="jam_buka" class="form-label">Jam Operasional</label>
                     <input type="text" class="form-control @error('jam_buka') is-invalid @enderror" id="jam_buka" 
-                    name="jam_buka" value = "{{ $biodiversity->jam_buka}}">
+                    name="jam_buka" value = "{{ $culturaldiversity->jam_buka}}">
                 @error('jam_buka')
                 <div class="invalid-feedback">
                 {{ $messages }}
@@ -142,7 +142,7 @@ active
                 <div class="mb-3 col-6">
                     <label for="harga_weekday" class="form-label">harga Weekday</label>
                     <input type="text" class="form-control @error('harga_weekday') is-invalid @enderror" id="harga_weekday" 
-                    name="harga_weekday" value = "{{ $biodiversity->harga_weekday}}">
+                    name="harga_weekday" value = "{{ $culturaldiversity->harga_weekday}}">
                 @error('harga_weekday')
                 <div class="invalid-feedback">
                 {{ $messages }}
@@ -153,7 +153,7 @@ active
                 <div class="mb-3 col-6">
                     <label for="harga_weekend" class="form-label">harga Weekend</label>
                     <input type="text" class="form-control @error('harga_weekend') is-invalid @enderror" id="harga_weekend" 
-                    name="harga_weekend" value = "{{ $biodiversity->harga_weekend}}">
+                    name="harga_weekend" value = "{{ $culturaldiversity->harga_weekend}}">
                 @error('harga_weekend')
                 <div class="invalid-feedback">
                 {{ $messages }}
@@ -166,7 +166,7 @@ active
                 <div class="mb-3 col-6">
                     <label for="kontak" class="form-label">Kontak</label>
                     <input type="text" class="form-control @error('kontak') is-invalid @enderror" id="kontak" 
-                    name="kontak" value = "{{ $biodiversity->kontak}}">
+                    name="kontak" value = "{{ $culturaldiversity->kontak}}">
                 @error('kontak')
                 <div class="invalid-feedback">
                 {{ $messages }}
@@ -177,7 +177,7 @@ active
                 <div class="mb-3 col-6">
                     <label for="sosmed" class="form-label">Sosial Media</label>
                     <input type="text" class="form-control @error('sosmed') is-invalid @enderror" id="sosmed" 
-                    name="sosmed" value = "{{ $biodiversity->sosmed}}">
+                    name="sosmed" value = "{{ $culturaldiversity->sosmed}}">
                 @error('sosmed')
                 <div class="invalid-feedback">
                 {{ $messages }}
@@ -189,7 +189,7 @@ active
                 <div class="mb-3 col-12">
                     <label for="deskripsi" class="form-label">Deskripsi</label>
                     <input type="text" class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" 
-                    name="deskripsi" value = "{{ $biodiversity->deskripsi}}">
+                    name="deskripsi" value = "{{ $culturaldiversity->deskripsi}}">
                 @error('deskripsi')
                 <div class="invalid-feedback">
                 {{ $messages }}
