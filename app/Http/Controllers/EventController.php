@@ -2,16 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\EventModel;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Space;
-use App\Models\MarkerModel;
-use App\Models\CategoryModel;
-use App\Http\Requests\StoreGeoparkRequest;
-use App\Http\Requests\UpdateGeodiversityRequest;
-use PDF;
+use App\Http\Requests\StoreEventRequest;
+use App\Http\Requests\UpdateEventRequest;
 
-class GeoparkController extends Controller
+class EventController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,10 +18,9 @@ class GeoparkController extends Controller
     public function index(Request $request)
     {
         $pagination = 10;
-        $spaces = Space::OrderBy('created_at', 'desc')-> paginate($pagination);
-
-        $spaces = Space::with('category')->get();
-        return view('geopark.index', ['spaces'=>$spaces])->with('i', ($request->input('page',1)-1)* $pagination);
+        $event = EventModel::OrderBy('created_at', 'desc')->paginate($pagination);
+        $event = EventModel::get();
+        return view('event.index', ['event'=>$event])->with('i', ($request->input('page',1)-1)* $pagination);
     }
 
     /**
@@ -34,7 +30,8 @@ class GeoparkController extends Controller
      */
     public function create()
     {
-        return view('geopark.create',['marker'=> MarkerModel::all()]);
+        $event = EventModel::all();
+        return view('event.create', ['event'=>$event]);
     }
 
     /**
@@ -43,7 +40,7 @@ class GeoparkController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreGeoparkRequest $request)
+    public function store(Request $request)
     {
         $data=$request->all();
 
@@ -55,10 +52,10 @@ class GeoparkController extends Controller
         $data['foto'] = $nama_file;
 
         //add data 
-        Space::create($data); 
+        EventModel::create($data); 
  
         // if true, redirect to index 
-        return redirect('/geopark') ->with('success', 'Add data success!');
+        return redirect('/event') ->with('success', 'Add data success!');
     }
 
     /**
@@ -67,9 +64,9 @@ class GeoparkController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(EventModel $event)
     {
-        //
+        return view('event.detail', compact('event'));
     }
 
     /**
@@ -80,7 +77,8 @@ class GeoparkController extends Controller
      */
     public function edit($id)
     {
-        //
+        $event = EventModel::findOrFail($id);
+        return view('event.edit', compact('event'));
     }
 
     /**
@@ -90,9 +88,16 @@ class GeoparkController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(updateEventRequest $request, EventModel $event)
     {
-        //
+        $data=$request->all();
+        $file = $request->file('foto');
+        $nama_file = time().'_'.$file->getClientOriginalName();
+        $tujuan_upload = 'storage';
+        $file->move($tujuan_upload,$nama_file);
+        $data['foto'] = $nama_file;
+        $event->update($data);
+        return redirect()->route('event.index')->with('success', 'data berhasil disimpan!');
     }
 
     /**
@@ -101,18 +106,9 @@ class GeoparkController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(EventModel $event)
     {
-        //
-    }
-
-    public function createPDF(Request $request){
-        //$spaces = Space::all();
-        $pagination = 10;
-        $spaces = Space::OrderBy('created_at', 'desc')-> paginate($pagination);
-        $spaces = Space::all();
-        $pdf = PDF::loadView('geopark.templatePDF', compact('spaces'))->setPaper('a4', 'landscape');
-        return $pdf->download('Data_geopark.pdf');
-
+        $event->delete($event->id);
+        return redirect()->route('event.index')->with('success', 'data berhasil dihapus!');
     }
 }

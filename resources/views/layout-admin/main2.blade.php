@@ -446,6 +446,69 @@ p5 {
     responsive: true
   });
   </script>
+  <script>
+        var map = L.map('map').setView([-8.351620144146487, 112.40159750298284
+    ], 10);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+
+    var MyIcon = L.Icon.extend({
+    options: {
+        iconSize:  [30, 35],
+    }
+});
+    @foreach ($spaces as $item)
+            L.marker([<?=$item->titik_koordinat?>], {icon: new MyIcon({iconUrl: '<?=($item->marker->marker=='')?url('storage/icon-biru.png') : url('storage/'.$item->marker->marker)?>'})}).addTo(map)
+                .bindPopup(
+                    "<div class='my-2'><img src='{{ url('storage/'.$item->foto) }}' class='img-fluid' width='700px'></div>" +
+                    "<div class='my-2'><strong>Nama Space:</strong> <br>{{ $item->nama }}</div>" +
+                    "<div><a href='{{ route('map.show', $item->nama) }}' class='btn btn-outline-info btn-sm'>Read More</a></div>" +
+                    "<div class='my-2'></div>"
+                ).addTo(map);
+        @endforeach
+
+        // pada koding ini kita menambahkan control pencarian data        
+        var markersLayer = new L.LayerGroup();
+        map.addLayer(markersLayer);
+        var controlSearch = new L.Control.Search({
+            position: 'topleft',
+            layer: markersLayer,
+            initial: false,
+            zoom: 17,
+            markerLocation: true
+        })
+
+
+        //menambahkan variabel controlsearch pada addControl
+        map.addControl(controlSearch);
+
+        // looping variabel datas utuk menampilkan data space ketika melakukan pencarian data
+        for (i in datas) {
+
+            var title = datas[i].title,
+                loc = datas[i].loc,
+                marker = new L.Marker(new L.latLng(loc), {
+                    title: title
+                });
+            markersLayer.addLayer(marker);
+
+            // melakukan looping data untuk memunculkan popup dari space yang dipilih
+            @foreach ($spaces as $item)
+                
+            L.marker([<?=$item->location?>], {icon: new MyIcon({iconUrl: '<?=($item->marker=='')?url('storage/icon-biru.png') : url('storage/'.$item->marker)?>'})}).addTo(map)
+                .bindPopup(
+                    "<div class='my-2'><img src=''{{ url('storage/'.$item->foto) }}'' class='img-fluid' width='700px'></div>" +
+                    "<div class='my-2'><strong>Nama Space:</strong> <br>{{ $item->nama }}</div>" +
+                    "<div><a href='{{ route('map.show', $item->nama) }}' class='btn btn-outline-info btn-sm'>Detail Space</a></div>" +
+                    "<div class='my-2'></div>"
+                ).addTo(map);
+            @endforeach
+        }
+        L.control.layers(baseLayers, overlays).addTo(map);
+    </script>
 </body>
 
 </html>

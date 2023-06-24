@@ -20,66 +20,66 @@ active
                     <div class="card-body">
                         <p>
                         <h5><strong>Nama Potensi :</strong></h5>
-                        <p>{{ $biodiversity->nama }}</p>
+                        <p>{{ $culturaldiversity->nama }}</p>
                         </p>
 
                         <p>
                         <h5><strong>Deskripsi :</strong></h5>
-                        <p>{{ $biodiversity->deskripsi }}</p>
+                        <p>{{ $culturaldiversity->deskripsi }}</p>
                         </p>
 
                         <p>
                         <h5><strong>Alamat :</strong></h5>
-                        <p>{{ $biodiversity->alamat }}</p>
+                        <p>{{ $culturaldiversity->alamat }}</p>
                         </p>
 
                         <p>
                         <h5><strong>Titik Koordinat :</strong></h5>
-                        <p>{{ $biodiversity->titik_koordinat }}</p>
+                        <p>{{ $culturaldiversity->titik_koordinat }}</p>
                         </p>
 
                         <p>
                         <h5><strong>Jam Operasional :</strong></h5>
-                        <p>{{ $biodiversity->jam_buka}}</p>
+                        <p>{{ $culturaldiversity->jam_buka}}</p>
                         </p>
 
                         <p>
                         <h5><strong>Harga Weekday :</strong></h5>
-                        <p>{{ $biodiversity->harga_weekday}}</p>
+                        <p>{{ $culturaldiversity->harga_weekday}}</p>
                         </p>
 
                         <p>
                         <h5><strong>Harga Weekend :</strong></h5>
-                        <p>{{ $biodiversity->harga_weekend}}</p>
+                        <p>{{ $culturaldiversity->harga_weekend}}</p>
                         </p>
 
                         <p>
                         <h5><strong>Kontak :</strong></h5>
-                        <p>{{ $biodiversity->kontak}}</p>
+                        <p>{{ $culturaldiversity->kontak}}</p>
                         </p>
 
                         <p>
                         <h5><strong>Sosial Media :</strong></h5>
-                        <p>{{ $biodiversity->sosmed}}</p>
+                        <p>{{ $culturaldiversity->sosmed}}</p>
                         </p>
 
                     </div>
                     <div class="card-footer">
-                        <a href="/biodiversity" class="btn btn-outline-primary">Kembali</a>
+                        <a href="/culturaldiversity" class="btn btn-outline-primary">Kembali</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-xs-6">
             <div class="card">
                     <div class="card-body">
-                    <iframe src="{{ $biodiversity->link_maps }}" width="490" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="{{ $culturaldiversity->link_maps }}" width="490" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     </div>
                     <p>
                         <h5>
                             <strong>Foto</strong>
                         </h5>
-                        <img class="img-fluid" width="500" height="300" src="{{ url('storage/'.$biodiversity->foto) }}"
+                        <img class="img-fluid" width="500" height="300" src="{{ url('storage/'.$culturaldiversity->foto) }}"
                             alt="">
                         </p>
                   </div>

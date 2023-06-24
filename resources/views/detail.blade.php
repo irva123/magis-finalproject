@@ -69,6 +69,12 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-6 col-xs-6">
+                    <div class="card-body">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d31572.725922792568!2d112.67733622884157!3d-8.441787691597929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwMjYnMzAuNCJTIDExMsKwNDEnNTIuNiJF!5e0!3m2!1sid!2sid!4v1687293157902!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+            </div>
+        </div>
         </div>
     </div>
     {{-- karena hanya akan menampilkan single data dari marker yang dipilih jadi kita tidak 

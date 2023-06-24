@@ -1,96 +1,47 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+@extends('layout-admin.main')
 
-.flip-card{
-	background-color: #FFFFFF;
-    width: 90%;
-    hight: 100%;
-    margin: 0px 10px 0px 70px;
-    padding: 50px 0px 20px 0px;
-}
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 80%;
-  border-radius: 5px;
-}
+@section('judul')
+Tables
+@endsection
 
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
+@section('title')
+Table Mobil
+@endsection
 
-img {
-  border-radius: 5px 5px 0 0;
-}
+@section('highlight2')
+active
+@endsection
 
-.container {
-  padding: 2px 16px;
-}
-
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
-body {
-    background-color: #F7F7F7;
-}
-
-.container img {
-      margin: auto;
-      float: none;
-      display: block;
-  }
-
-  .container img {
-  float: left;
-  margin-Top: 5 px;
-  margin-right: 20px;
-  border-radius: 50%;
-}
-
-.container span {
-  font-size: 12px;
-  margin-right: 15px;
-}
-.row {margin: 0 -5px;}
-
-p {
-   line-height:5px;
-}
-
-.time-right {
-  float: right;
-  color: #aaa;
-}
-
-h2 {
-   margin-bottom: 50px;
-}
-</style>
-
-</head>
-<body>
-<div class="body">
-<div class="center">
+@section('navbar')
+<div class="container-fluid py-4 px-5">
+      <div class="row">
+        <div class="col-12">
+          <div class="card card-background card-background-after-none align-items-start mt-1 mb-1">
+            <div class="full-background" style="background: linear-gradient(90deg, #0A7AFE -1.83%, #13FFE3 52.33%, rgba(15, 14, 14, 0.3) 100%);"></div>
+            <div class="card-body text-start p-4 w-100">
+              <h3 class="text-white mb-2">Malang Geopark Information Sistem 🔥</h3>
+              <p class="mb-4 font-weight-semibold">
+              Badan Perencanaan Pembangunan Daerah Kabupaten Malang
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+<div class="body5">
+<div class="center5 mt-3 mb-3">
 <h2>Riview Kritik Dan Saran</h2>
 </div>
 @foreach ($kritik_dan_saran as $kritik)
-<div class="flip-card">
-<div class="center">
-<div class="card">
-  <div class="container">
-  <div class="row">
+<div class="flip-card5">
+<div class="center5">
+<div class="card5">
+  <div class="container5">
+  <div class="row5">
   <img src='{{ url('storage/FotoProfil.jpg') }}' alt="Avatar" style="width:50px">
-  <span class="time-right">{{ $kritik->created_at }}</span>
-  <p><span>{{ $kritik->nama }}</span></p>
-  <p><span>{{ $kritik->email }}</span></p>
-  <p><span>{{ $kritik->no_hp }}</span></p>
+  <span class="time-right5">{{ $kritik->created_at }}</span>
+  <p5><span>{{ $kritik->nama }}</span></p>
+  <p5><span>{{ $kritik->email }}</span></p>
+  <p5><span>{{ $kritik->no_hp }}</span></p>
     <h3>{{ $kritik->isi_pesan }}</h3> 
   </div>
   </div>
@@ -100,5 +51,4 @@ h2 {
 </div>
 </div>
 @endforeach
-</body>
-</html> 
+  @endsection
