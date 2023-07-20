@@ -9,7 +9,7 @@
           <a class="nav-link  @yield('highlight')" href="/dashboard">
             <div class="icon icon-shape icon-sm px-0 text-center d-flex align-items-center justify-content-center">
               <svg width="30px" height="30px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <title>dashboard</title>
+                <title>Dashboard</title>
                 <g id="dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g id="template" transform="translate(12.000000, 12.000000)" fill="#FFFFFF" fill-rule="nonzero">
                     <path class="color-foreground" d="M0,1.71428571 C0,0.76752 0.76752,0 1.71428571,0 L22.2857143,0 C23.2325143,0 24,0.76752 24,1.71428571 L24,5.14285714 C24,6.08962286 23.2325143,6.85714286 22.2857143,6.85714286 L1.71428571,6.85714286 C0.76752,6.85714286 0,6.08962286 0,5.14285714 L0,1.71428571 Z" id="Path"></path>
@@ -38,9 +38,7 @@
                 </g>
               </svg>
             </div>
-            <a class="" href="/geopark" >
             <span class="nav-link-text ms-1" >Geopark</span>
-          </a>
         </li>
         <li class="nav-item border-start my-0 pt-2">
           <a class="nav-link position-relative ms-0 ps-2 py-2 @yield('highlight2')" href="/geodiversity" >
@@ -66,7 +64,7 @@
           <a class="nav-link  @yield('highlight3')" href="/event">
             <div class="icon icon-shape icon-sm px-0 text-center d-flex align-items-center justify-content-center">
               <svg width="30px" height="30px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <title>Event</title>
+                <title>Kegiatan</title>
                 <g id="wallet" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g id="credit-card" transform="translate(12.000000, 15.000000)" fill="#FFFFFF">
                     <path class="color-background" d="M3,0 C1.343145,0 0,1.343145 0,3 L0,4.5 L24,4.5 L24,3 C24,1.343145 22.6569,0 21,0 L3,0 Z" id="Path" fill-rule="nonzero"></path>
@@ -75,7 +73,7 @@
                 </g>
               </svg>
             </div>
-            <span class="nav-link-text ms-1 ">Data Event</span>
+            <span class="nav-link-text ms-1 ">Data Kegiatan</span>
           </a>
         </li>
         <li class="nav-item mt-2">

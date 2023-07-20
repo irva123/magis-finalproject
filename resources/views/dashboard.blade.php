@@ -19,9 +19,9 @@ active
           <div class="card card-background card-background-after-none align-items-start mt-1 mb-1">
             <div class="full-background" style="background-image: url('../assets/img/hijau-biru.jpeg')"></div>
             <div class="card-body text-start p-4 w-100">
-              <h3 class="text-white mb-2">Management Geopark Information Sistem</h3>
+              <h3 class="text-white mb-2">Malang Geopark Information System</h3>
               <p class="mb-4 font-weight-semibold">
-              Badan Perencanaan Daerah Kabupaten Malang.
+              Badan Perencanaan Pembangunan Daerah Kabupaten Malang
               </p>
             </div>
           </div>
@@ -138,7 +138,7 @@ active
                     <div class="card-body">
                     <table class="table">
                             <tbody><tr>
-                                <th colspan="2" class="text-center">Legenda</th>
+                                <th colspan="2" class="text-center">Keterangan</th>
                             </tr>
                             <tr>
                                     <td width="80px" class="p-1">
@@ -167,14 +167,12 @@ active
                             </tbody>
                         </table>
                     </div>
-                    <div class="card-footer">
-                        <a href="/homepage" class="btn btn-outline-primary">Kembali</a>
-                    </div>
-                </div>
+                  </div>
             </div>
             <div class="col-md-8 col-xs-6">
                 <div class="card">
                     <div class="card-body">
+                      
                         <div id="map"></div>
                     </div>
                 </div>

@@ -19,7 +19,7 @@ active
           <div class="card card-background card-background-after-none align-items-start mt-1 mb-1">
             <div class="full-background" style="background: linear-gradient(90deg, #0A7AFE -1.83%, #13FFE3 52.33%, rgba(15, 14, 14, 0.3) 100%);"></div>
             <div class="card-body text-start p-4 w-100">
-              <h3 class="text-white mb-2">Malang Geopark Information Sistem 🔥</h3>
+              <h3 class="text-white mb-2">Malang Geopark Information System</h3>
               <p class="mb-4 font-weight-semibold">
               Badan Perencanaan Pembangunan Daerah Kabupaten Malang
               </p>
@@ -29,7 +29,7 @@ active
       </div>
 <div class="body5">
 <div class="center5 mt-3 mb-3">
-<h2>Riview Kritik Dan Saran</h2>
+<h2>Kritik dan Saran</h2>
 </div>
 @foreach ($kritik_dan_saran as $kritik)
 <div class="flip-card5">

@@ -33,26 +33,25 @@ FACEBOOK: https://www.facebook.com/themefisher
                 @csrf
 
                         <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Name is required" >
-                            <span class="label-input100">Your Name</span>
-                            <input class="input100" type="text" name="nama" placeholder="Enter your name" id="nama">
+                            <span class="label-input100">Nama</span>
+                            <input class="input100" type="text" name="nama" placeholder="Masukkan nama anda" id="nama">
                             <span class="focus-input100"></span>
                         </div>
 
                         <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz" id="email">
                             <span class="label-input100">Email</span>
-                            <input class="input100" type="text" name="email" placeholder="Enter your email addess">
+                            <input class="input100" type="text" name="email" placeholder="Masukkan alamat email anda">
                             <span class="focus-input100"></span>
                         </div>
 
                         <div class="wrap-input100 validate-input" data-validate = "Message is required" id="no_hp">
-                            <span class="label-input100">No.Hp</span>
-                            <input class="input100" name="no_hp" placeholder="Your message here..."></input>
-                            <span class="focus-input100"></span>
+                            <span class="label-input100">No. Hp/WhatsApp</span>
+                            <input class="input100" name="no_hp" placeholder="Masukkan no. hp atau Wa anda
                         </div>
 
                         <div class="wrap-input100 validate-input" data-validate = "Message is required" id="isi_pesan">
-                            <span class="label-input100">Message</span>
-                            <textarea class="input100" name="isi_pesan" placeholder="Your message here..."></textarea>
+                            <span class="label-input100">Kritik dan Saran</span>
+                            <textarea class="input100" name="isi_pesan" placeholder="Sampaikan kritik dan saran anda di sini..."></textarea>
                             <span class="focus-input100"></span>
                         </div>
                     <!-- submit button -->

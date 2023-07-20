@@ -44,12 +44,12 @@ active
                         </p>
 
                         <p>
-                        <h5><strong>Harga Weekday :</strong></h5>
+                        <h5><strong>Harga Tiket Hari Kerja :</strong></h5>
                         <p>{{ $biodiversity->harga_weekday}}</p>
                         </p>
 
                         <p>
-                        <h5><strong>Harga Weekend :</strong></h5>
+                        <h5><strong>Harga Tiket Akhir Pekan :</strong></h5>
                         <p>{{ $biodiversity->harga_weekend}}</p>
                         </p>
 
@@ -81,8 +81,8 @@ active
                         </h5>
                         <img class="img-fluid" width="500" height="300" src="{{ url('storage/'.$biodiversity->foto) }}"
                             alt="">
-                        </p>
-                  </div>
+                    </p>
+            </div>
             </div>
         </div>
         </div>

@@ -73,7 +73,7 @@ active
                 </div>
 
                 <div class="mb-3">
-                    <label for="tanggal_kegiatan" class="form-label">tanggal</label>
+                    <label for="tanggal_kegiatan" class="form-label">Tanggal</label>
                     <input type="text" class="form-control @error('tanggal_kegiatan') is-invalid @enderror" id="tanggal_kegiatan" 
                     name="tanggal_kegiatan" required autofocus value = "{{ old('tanggal_kegiatan') }}">
                 @error('tanggal_kegiatan')
@@ -84,7 +84,7 @@ active
                 </div>
 
                 <div class="mb-3">
-                    <label for="waktu_kegiatan" class="form-label">waktu</label>
+                    <label for="waktu_kegiatan" class="form-label">Waktu</label>
                     <input type="text" class="form-control @error('waktu_kegiatan') is-invalid @enderror" id="waktu_kegiatan" 
                     name="waktu_kegiatan" required autofocus value = "{{ old('waktu_kegiatan') }}">
                 @error('waktu_kegiatan')
@@ -106,7 +106,7 @@ active
                 </div>
 
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Simpan</button>
          </form>
         </div>
         </div>

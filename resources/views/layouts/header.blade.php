@@ -52,9 +52,9 @@
                                                     </ul>
                                                     </li>
                                                 </li>
-                                                    <li class="nav-item"><a href="#" class="nav-link  font-weight-bold ">Event</a></li>
+                                                    <li class="nav-item"><a href="#" class="nav-link  font-weight-bold ">Kegiatan</a></li>
                                                     <li class="nav-item"><a href="/map2" class="nav-link  font-weight-bold ">Peta</a></li>
-                                                    <li class="nav-item"><a href="/kritik/create" class="nav-link  font-weight-bold ">Kritik dan saran</a></li>
+                                                    <li class="nav-item"><a href="/kritik/create" class="nav-link  font-weight-bold ">Kritik dan Saran</a></li>
 
 
                                                 </ul>
