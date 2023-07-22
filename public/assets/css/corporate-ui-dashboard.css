@@ -4580,6 +4580,16 @@ fieldset:disabled .btn {
   border-color: transparent;
 }
 
+.nav-link.Active {
+color: rgba(0, 0, 0, 0.2);
+background-color: rgba(0, 0, 0, 0.2);
+border-color:rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+  color: #FFFFFF;
+}
+
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   color: var(--bs-nav-tabs-link-active-color);
@@ -10627,6 +10637,22 @@ fieldset:disabled .btn {
   background-color: #cbd5e1 !important;
 }
 
+.bg-heritage {
+  background-color: #30494A !important;
+}
+
+.bg-geo {
+  background-color: #CB3ECE !important;
+}
+
+.bg-bio {
+  background-color: #31BC53 !important;
+}
+
+.bg-cultural {
+  background-color: #448FB3 !important;
+}
+
 .bg-dark {
   background-color: #1e293b !important;
 }
@@ -10684,7 +10710,7 @@ fieldset:disabled .btn {
 }
 
 .bg-slate-900 {
-  background-color: #00C2FF !important;
+  background-color: #495555 !important;
 }
 
 .bg-opacity-10 {

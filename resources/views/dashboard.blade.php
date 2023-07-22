@@ -9,7 +9,7 @@ Dashboard
 @endsection
 
 @section('highlight')
-active
+Active
 @endsection
 
 @section('navbar')
@@ -17,11 +17,11 @@ active
 <div class="row">
         <div class="col-12">
           <div class="card card-background card-background-after-none align-items-start mt-1 mb-1">
-            <div class="full-background" style="background-image: url('../assets/img/hijau-biru.jpeg')"></div>
+            <div class="full-background" style="background: #D2E4E5"></div>
             <div class="card-body text-start p-4 w-100">
-              <h3 class="text-white mb-2">Management Geopark Information Sistem</h3>
-              <p class="mb-4 font-weight-semibold">
-              Badan Perencanaan Daerah Kabupaten Malang.
+              <h3 class="text-black mb-2 mt-3">Malang Geopark Information System</h3>
+              <p class=" text-black mb-4 font-weight-semibold">
+              Badan Perencanaan Pembangunan Daerah Kabupaten Malang
               </p>
             </div>
           </div>
@@ -31,7 +31,7 @@ active
         <div class="col-xl-3 col-sm-6 mb-xl-0">
           <div class="card border shadow-xs mb-4">
             <div class="card-body text-start p-3 w-100">
-              <div class="icon icon-shape icon-sm bg-dark text-white text-center border-radius-sm d-flex align-items-center justify-content-center mb-3">
+              <div class="icon icon-shape icon-sm bg-heritage text-white text-center border-radius-sm d-flex align-items-center justify-content-center mb-3">
                 <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M4.5 3.75a3 3 0 00-3 3v.75h21v-.75a3 3 0 00-3-3h-15z" />
                   <path fill-rule="evenodd" d="M22.5 9.75h-21v7.5a3 3 0 003 3h15a3 3 0 003-3v-7.5zm-18 3.75a.75.75 0 01.75-.75h6a.75.75 0 010 1.5h-6a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z" clip-rule="evenodd" />
@@ -41,13 +41,7 @@ active
                 <div class="col-12">
                   <div class="w-100">
                     <p class="text-sm text-secondary mb-1">Geoheritage</p>
-                    <h4 class="mb-2 font-weight-bold">{{ $geoheritage }}</h4>
-                    <div class="d-flex align-items-center">
-                      <span class="text-sm text-success font-weight-bolder">
-                        <i class="fa fa-chevron-up text-xs me-1"></i>10.5%
-                      </span>
-                      <span class="text-sm ms-1">from $89,740.00</span>
-                    </div>
+                    <h4 class="mb-2 font-weight-bold">{{ $geoheritage }} Potensi</h4>
                   </div>
                 </div>
               </div>
@@ -57,23 +51,17 @@ active
         <div class="col-xl-3 col-sm-6 mb-xl-0">
           <div class="card border shadow-xs mb-4">
             <div class="card-body text-start p-3 w-100">
-              <div class="icon icon-shape icon-sm bg-dark text-white text-center border-radius-sm d-flex align-items-center justify-content-center mb-3">
-                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                  <path fill-rule="evenodd" d="M7.5 5.25a3 3 0 013-3h3a3 3 0 013 3v.205c.933.085 1.857.197 2.774.334 1.454.218 2.476 1.483 2.476 2.917v3.033c0 1.211-.734 2.352-1.936 2.752A24.726 24.726 0 0112 15.75c-2.73 0-5.357-.442-7.814-1.259-1.202-.4-1.936-1.541-1.936-2.752V8.706c0-1.434 1.022-2.7 2.476-2.917A48.814 48.814 0 017.5 5.455V5.25zm7.5 0v.09a49.488 49.488 0 00-6 0v-.09a1.5 1.5 0 011.5-1.5h3a1.5 1.5 0 011.5 1.5zm-3 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z" clip-rule="evenodd" />
-                  <path d="M3 18.4v-2.796a4.3 4.3 0 00.713.31A26.226 26.226 0 0012 17.25c2.892 0 5.68-.468 8.287-1.335.252-.084.49-.189.713-.311V18.4c0 1.452-1.047 2.728-2.523 2.923-2.12.282-4.282.427-6.477.427a49.19 49.19 0 01-6.477-.427C4.047 21.128 3 19.852 3 18.4z" />
-                </svg>
+              <div class="icon icon-shape icon-sm bg-geo text-white text-center border-radius-sm d-flex align-items-center justify-content-center mb-3">
+              <svg width="16" height="16" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21.3081 3.69193C20.1534 2.52588 18.7798 1.59945 17.266 0.965883C15.7523 0.332311 14.1283 0.0040766 12.4873 3.77328e-05C10.8463 -0.00400114 9.22071 0.316235 7.70386 0.942348C6.18701 1.56846 4.80882 2.48811 3.64847 3.64847C2.48811 4.80882 1.56846 6.18701 0.942348 7.70386C0.316235 9.22071 -0.00400114 10.8463 3.77328e-05 12.4873C0.0040766 14.1283 0.332311 15.7523 0.965883 17.266C1.59946 18.7798 2.52588 20.1534 3.69193 21.3081C4.84656 22.4741 6.22021 23.4005 7.73395 24.0341C9.2477 24.6677 10.8717 24.9959 12.5127 25C14.1537 25.004 15.7793 24.6838 17.2961 24.0577C18.813 23.4315 20.1912 22.5119 21.3515 21.3515C22.5119 20.1912 23.4315 18.813 24.0577 17.2961C24.6838 15.7793 25.004 14.1537 25 12.5127C24.9959 10.8717 24.6677 9.2477 24.0341 7.73395C23.4005 6.22021 22.4741 4.84656 21.3081 3.69193ZM1.82288 12.5C1.82248 11.555 1.94777 10.6142 2.19547 9.70226C2.60364 10.5809 3.19645 11.34 3.59962 12.2414C4.12068 13.4003 5.51983 13.0789 6.13766 14.0943C6.68597 14.9958 6.1004 16.1358 6.5108 17.0789C6.80887 17.7635 7.51178 17.9131 7.9967 18.4136C8.49219 18.9185 8.48162 19.6103 8.55725 20.2687C8.64259 21.0423 8.78102 21.8091 8.97154 22.5637C8.97154 22.5693 8.97155 22.5754 8.97599 22.581C4.8147 21.1196 1.82288 17.1529 1.82288 12.5ZM12.5 23.1771C11.9037 23.1769 11.3085 23.1271 10.7205 23.0281C10.7266 22.8774 10.7294 22.7367 10.7444 22.6388C10.8795 21.7546 11.3222 20.8899 11.9194 20.2281C12.5095 19.5753 13.318 19.1337 13.8163 18.393C14.3045 17.6701 14.4508 16.6969 14.2495 15.8522C13.9531 14.6043 12.2575 14.1878 11.3433 13.511C10.8178 13.1217 10.3501 12.52 9.66 12.4711C9.34191 12.4488 9.07553 12.5172 8.76023 12.436C8.47105 12.361 8.24417 12.2053 7.93609 12.2459C7.36052 12.3215 6.99739 12.9365 6.37901 12.8531C5.79232 12.7747 5.18784 12.0879 5.05438 11.529C4.8831 10.8106 5.45143 10.5776 6.06036 10.5136C6.3145 10.4869 6.59978 10.458 6.84391 10.5514C7.16533 10.6704 7.31715 10.9852 7.60576 11.1442C8.14685 11.4412 8.2564 10.9668 8.17354 10.4864C8.04953 9.76677 7.90494 9.4737 8.54668 8.97822C8.99156 8.63677 9.37194 8.38986 9.30076 7.77649C9.25849 7.41613 9.06108 7.2532 9.24515 6.89451C9.38473 6.62147 9.76788 6.37511 10.0176 6.21218C10.6621 5.79176 12.7786 5.82291 11.9139 4.6462C11.6597 4.30086 11.1909 3.68359 10.7461 3.59906C10.19 3.49396 9.94305 4.11457 9.55545 4.38817C9.15506 4.67122 8.37541 4.99265 7.97446 4.555C7.43504 3.96609 8.33203 3.77312 8.53056 3.36161C8.62231 3.16975 8.53056 2.90338 8.37596 2.65258C8.57653 2.56805 8.78043 2.48964 8.98767 2.41735C9.11755 2.51328 9.27162 2.57105 9.43255 2.58418C9.80458 2.60865 10.1555 2.40734 10.4802 2.66092C10.8406 2.93897 11.1003 3.29043 11.5785 3.37718C12.0412 3.46115 12.5311 3.19144 12.6457 2.71764C12.7152 2.42958 12.6457 2.1254 12.579 1.82788C14.6588 1.83985 16.6893 2.46272 18.418 3.61908C18.3068 3.57682 18.1739 3.58182 18.0098 3.65801C17.6723 3.81483 17.194 4.21411 17.1546 4.61005C17.1095 5.05938 17.7724 5.12278 18.0871 5.12278C18.5598 5.12278 19.0386 4.91146 18.8863 4.36537C18.8201 4.12847 18.73 3.88212 18.5848 3.73308C18.9338 3.97518 19.268 4.23775 19.5858 4.51941C19.5808 4.52441 19.5758 4.52886 19.5708 4.53442C19.2505 4.86808 18.8785 5.13223 18.6594 5.53818C18.5048 5.82402 18.3307 5.95971 18.0176 6.03367C17.8452 6.07426 17.6484 6.08928 17.5038 6.20495C17.1012 6.52192 17.3303 7.28378 17.7118 7.51234C18.1939 7.80095 18.9091 7.66527 19.2727 7.2532C19.5569 6.93066 19.7243 6.37067 20.2354 6.37122C20.4603 6.37075 20.6765 6.45885 20.8371 6.61646C21.0484 6.83556 21.0067 7.04021 21.0517 7.31381C21.1312 7.79984 21.56 7.53625 21.8208 7.29101C22.0109 7.62935 22.1824 7.9778 22.3346 8.33481C22.0477 8.74799 21.8197 9.19843 21.1296 8.71685C20.7164 8.42824 20.4622 8.00949 19.9434 7.87936C19.4902 7.76814 19.0258 7.88381 18.5782 7.96111C18.0693 8.04953 17.466 8.08846 17.08 8.47383C16.7069 8.84531 16.5095 9.34246 16.1124 9.71561C15.3445 10.4385 15.0202 11.2276 15.5174 12.2498C15.9956 13.2324 16.9961 13.7657 18.0755 13.6956C19.1359 13.625 20.2376 13.0099 20.207 14.5509C20.1959 15.0964 20.3099 15.474 20.4773 15.9806C20.6324 16.4478 20.6218 16.9004 20.6574 17.3826C20.6913 17.9471 20.7795 18.5071 20.921 19.0548C19.9243 20.3381 18.6474 21.3767 17.1879 22.0911C15.7284 22.8056 14.125 23.1771 12.5 23.1771Z" fill="#D2E4E5"/>
+              </svg>
+
               </div>
               <div class="row">
                 <div class="col-12">
                   <div class="w-100">
                     <p class="text-sm text-secondary mb-1">Geodiversity</p>
-                    <h4 class="mb-2 font-weight-bold">{{ $geodiversity }}</h4>
-                    <div class="d-flex align-items-center">
-                      <span class="text-sm text-success font-weight-bolder">
-                        <i class="fa fa-chevron-up text-xs me-1"></i>55%
-                      </span>
-                      <span class="text-sm ms-1">from 243</span>
-                    </div>
+                    <h4 class="mb-2 font-weight-bold">{{ $geodiversity }} Potensi</h4>
                   </div>
                 </div>
               </div>
@@ -83,22 +71,17 @@ active
         <div class="col-xl-3 col-sm-6 mb-xl-0">
           <div class="card border shadow-xs mb-4">
             <div class="card-body text-start p-3 w-100">
-              <div class="icon icon-shape icon-sm bg-dark text-white text-center border-radius-sm d-flex align-items-center justify-content-center mb-3">
-                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                  <path fill-rule="evenodd" d="M3 6a3 3 0 013-3h12a3 3 0 013 3v12a3 3 0 01-3 3H6a3 3 0 01-3-3V6zm4.5 7.5a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0v-2.25a.75.75 0 01.75-.75zm3.75-1.5a.75.75 0 00-1.5 0v4.5a.75.75 0 001.5 0V12zm2.25-3a.75.75 0 01.75.75v6.75a.75.75 0 01-1.5 0V9.75A.75.75 0 0113.5 9zm3.75-1.5a.75.75 0 00-1.5 0v9a.75.75 0 001.5 0v-9z" clip-rule="evenodd" />
-                </svg>
+              <div class="icon icon-shape icon-sm bg-bio text-white text-center border-radius-sm d-flex align-items-center justify-content-center mb-3">
+              <svg width="16" height="16" viewBox="0 0 121 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M57.6842 0.00025786C12.4781 0.192444 -24.3413 53.9382 22.3337 97.4148C24.5087 103.909 33.9153 108.012 48.0257 112.202C58.2668 115.267 61.7726 110.934 59.4226 105.22C49.2774 80.5509 26.2307 81.3915 24.6127 79.1341C-3.31935 40.1657 41.5417 3.12789 78.413 19.8775C120.35 38.9198 103.631 75.69 79.7933 91.2472C70.5952 97.2254 64.9609 105.023 67.9867 112.748C69.6082 116.882 77.4498 120.174 80.4194 119.602C82.7631 119.151 70.5949 112.88 78.1718 105.303C84.1913 99.2567 102.427 95.7288 112.043 78.8496C130.302 46.8649 119.812 17.9224 76.6632 3.1353C73.3726 2.01745 70.0977 1.21369 66.8152 0.694634C63.7979 0.219768 60.7434 -0.0124392 57.6845 0.000513286L57.6842 0.00025786ZM60.7794 20.4967C60.7794 20.4967 53.0983 28.3503 53.2347 36.379C53.2429 38.0233 53.5877 39.6903 54.1094 41.2703C56.8705 44.3396 59.1097 47.8971 61.0523 51.7577C62.9704 47.0295 65.4184 42.9754 68.4605 39.6719C68.6529 38.6752 68.7571 37.6939 68.7571 36.701C68.6448 28.6767 60.7794 20.4967 60.7794 20.4967ZM91.8169 34.2823C77.3456 35.0894 67.9873 47.3916 62.409 58.1098C62.1681 58.5985 60.3926 58.7324 60.081 58.2274C55.9637 51.1916 53.379 45.906 48.2907 41.9204C43.475 38.1393 37.3989 35.8888 29.22 35.8471C29.5732 38.9121 31.1149 47.3119 37.5597 51.9683C39.7591 53.563 42.9531 54.3895 46.196 55.0977C49.4228 55.7837 52.7369 56.3252 55.2653 57.7423C57.3039 58.8865 58.6041 60.675 59.2223 62.755C59.8403 64.8272 59.8244 67.1799 59.3509 69.6732C58.5559 74.0038 56.397 78.7663 53.5155 83.1536C53.5155 83.1536 62.0392 86.5067 63.5565 99.1613C66.3815 92.6824 72.329 88.9772 72.329 88.9772C69.1989 84.7752 64.7522 73.9013 63.6929 69.6277C63.1069 67.1692 62.9222 64.831 63.4038 62.7282C63.8775 60.6295 65.0494 58.7656 67.0157 57.519C69.4558 55.9766 72.7064 55.2643 75.9087 54.401C79.1192 53.5329 82.2415 52.5175 84.3924 50.7975C88.1968 47.7287 90.0906 43.3222 91.0137 39.6247C91.4634 37.7718 91.6962 36.1196 91.7844 34.9452C91.8169 34.6572 91.8088 34.5057 91.8169 34.2823ZM34.1253 93.3137C36.7565 93.3817 43.7476 98.537 41.7728 98.9206C33.1735 100.59 32.0309 95.4387 33.3035 93.6247C33.4626 93.398 33.7493 93.3042 34.1253 93.3137Z" fill="#D2E4E5"/>
+              </svg>
+
               </div>
               <div class="row">
                 <div class="col-12">
                   <div class="w-100">
                     <p class="text-sm text-secondary mb-1">Biodiversity</p>
-                    <h4 class="mb-2 font-weight-bold">{{ $biodiversity }}</h4>
-                    <div class="d-flex align-items-center">
-                      <span class="text-sm text-success font-weight-bolder">
-                        <i class="fa fa-chevron-up text-xs me-1"></i>22%
-                      </span>
-                      <span class="text-sm ms-1">from $369.30</span>
-                    </div>
+                    <h4 class="mb-2 font-weight-bold">{{ $biodiversity }} Potensi</h4>
                   </div>
                 </div>
               </div>
@@ -108,22 +91,17 @@ active
         <div class="col-xl-3 col-sm-6">
           <div class="card border shadow-xs mb-4">
             <div class="card-body text-start p-3 w-100">
-              <div class="icon icon-shape icon-sm bg-dark text-white text-center border-radius-sm d-flex align-items-center justify-content-center mb-3">
-                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                  <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd" />
-                </svg>
+              <div class="icon icon-shape icon-sm bg-cultural text-white text-center border-radius-sm d-flex align-items-center justify-content-center mb-3">
+              <svg width="16" height="16" viewBox="0 0 131 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22.7611 41.8833H33.3595L34.9888 95.7333H21.3511L22.7611 41.8833ZM13.9111 98.725H116.756V104.708H124.875V113.683H130.288V119.667H0.378906V113.683H5.79178V104.708H13.9111V98.725ZM122.169 26.3626L65.3388 0L8.49822 26.3626V29.9167H122.169V26.3626ZM19.324 32.9083H111.343V38.8917H19.324V32.9083ZM97.0961 41.8833H107.689L109.332 95.7333H95.6752L97.0961 41.8833ZM72.3268 41.8833H82.9198L84.5437 95.7333H70.9005L72.3268 41.8833ZM47.5521 41.8833H58.1478L59.7608 95.7333H46.1231L47.5521 41.8833Z" fill="#D2E4E5"/>
+              </svg>
+
               </div>
               <div class="row">
                 <div class="col-12">
                   <div class="w-100">
                     <p class="text-sm text-secondary mb-1">Cultural Diversity</p>
-                    <h4 class="mb-2 font-weight-bold">{{ $culturaldiversity }}</h4>
-                    <div class="d-flex align-items-center">
-                      <span class="text-sm text-success font-weight-bolder">
-                        <i class="fa fa-chevron-up text-xs me-1"></i>18%
-                      </span>
-                      <span class="text-sm ms-1">from $19,800.40</span>
-                    </div>
+                    <h4 class="mb-2 font-weight-bold">{{ $culturaldiversity }} Potensi</h4>
                   </div>
                 </div>
               </div>
@@ -133,46 +111,7 @@ active
       </div>
       <div class="container py-4 justify-content-center">
         <div class="row">
-            <div class="col-md-4 col-xs-6 mb-2">
-                <div class="card">
-                    <div class="card-body">
-                    <table class="table">
-                            <tbody><tr>
-                                <th colspan="2" class="text-center">Legenda</th>
-                            </tr>
-                            <tr>
-                                    <td width="80px" class="p-1">
-                                    <div style="background: #2F2CCD;">​</div>
-                                    </td>
-                                    <td class="p-1 align-middle text-left">
-                                        Geodiversity
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td width="50px" class="p-1">
-                                        <div style="background: #2CCD45;">​</div>
-                                    </td>
-                                    <td class="p-1 align-middle text-left">
-                                        Biodiversity
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td width="50px" class="p-1">
-                                        <div style="background: #AD3711;">​</div>
-                                    </td>
-                                    <td class="p-1 align-middle text-left">
-                                        Culture Diversity
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="card-footer">
-                        <a href="/homepage" class="btn btn-outline-primary">Kembali</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-8 col-xs-6">
+            <div class="col-md-12 col-xs-6">
                 <div class="card">
                     <div class="card-body">
                         <div id="map"></div>

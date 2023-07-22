@@ -8,7 +8,7 @@ Tables
 Table Mobil
 @endsection
 
-@section('highlight2')
+@section('highlight3')
 active
 @endsection
 
@@ -19,7 +19,7 @@ active
           <div class="card card-background card-background-after-none align-items-start mt-1 mb-1">
             <div class="full-background" style="background: linear-gradient(90deg, #0A7AFE -1.83%, #13FFE3 52.33%, rgba(15, 14, 14, 0.3) 100%);"></div>
             <div class="card-body text-start p-4 w-100">
-              <h3 class="text-white mb-2">Malang Geopark Information Sistem 🔥</h3>
+              <h3 class="text-white mb-2">Malang Geopark Information System</h3>
               <p class="mb-4 font-weight-semibold">
               Badan Perencanaan Pembangunan Daerah Kabupaten Malang
               </p>
@@ -33,30 +33,26 @@ active
             <div class="card-header border-bottom pb-0">
               <div class="d-sm-flex align-items-center">
                 <div>
-                  <h6 class="font-weight-semibold text-lg mb-0">List Geodiversity</h6>
+                  <h6 class="font-weight-semibold text-lg mb-0">Daftar Geodiversity</h6>
                 </div>
                 <div class="ms-auto d-flex">
                   <button type="button" class="btn btn-sm btn-white me-2">
-                  <a href="/geopark/"> View all </a>
+                  <a href="/geopark"> Lihat Semua </a>
                   </button>
-                  <button type="button" class="btn btn-sm btn-dark btn-icon d-flex align-items-center me-2">
-                    <span class="btn-inner--icon">
-                      <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="d-block me-2">
-                        <path d="M6.25 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM3.25 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM19.75 7.5a.75.75 0 00-1.5 0v2.25H16a.75.75 0 000 1.5h2.25v2.25a.75.75 0 001.5 0v-2.25H22a.75.75 0 000-1.5h-2.25V7.5z" />
-                      </svg>
+                  <button type="button" class="btn btn-sm btn-white me-2">
                     </span>
                     <span>
-                      <a href="/geodiversity/create" class="btn-inner--text">Add Product></a>
+                      <a href="/geodiversity/create" class="btn-inner--text">Tambah Potensi</a>
                     </span>
                   </button>
 
                   {{-- tombol Ekspor PDF --}}
-                  <form action="{{route('create-pdf1')}}"class="d-inline">
-                    <button class="btn btn-outline-info  btn-icon-split">
-                      <span class="icon text-white-50">
+                  <form action="{{route('create-pdf1')}}"class="ms-auto d-flex">
+                    <button class="btn btn-sm btn-white me-2">
+                      <span>
                         <i class="fas fa-download"></i>
                       </span>
-                      <span class="text">Ekspor Data (PDF)</span>
+                      <span class="text">Unduh Data (PDF)</span>
                     </button>
                   </form>
                 </div>

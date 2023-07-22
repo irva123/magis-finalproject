@@ -5,19 +5,25 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Space;
+use App\Models\CategoryModel;
 
-class HomepageController extends Controller
+class Geoheritage2Controller extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        
-        $spaces = Space::all();
-        return view('homepage',['spaces'=>$spaces ]); 
+        $pagination  = 9;
+        $spaces = Space::when($request->keyword, function ($query) use ($request) {$query->where('nama', 'like', "%{$request->keyword}%");
+        })->orderBy('created_at', 'desc')->paginate($pagination);
+        $spaces->appends($request->only('keyword'));
+
+        $spaces = Space::with('category')->where('id_category', '1')->get();
+        return view('potensi.geoheritage', ['spaces'=>$spaces]);
+    
     }
 
     /**

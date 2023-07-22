@@ -4,10 +4,6 @@
 Tables
 @endsection
 
-@section('title')
-Form Edit Table Mobil
-@endsection
-
 @section('highlight2')
 active
 @endsection
@@ -27,7 +23,7 @@ active
                 <div class="mb-3">
                     <label for="nama" class="form-label">Nama</label>
                     <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" 
-                    name="nama" required autofocus value = "{{ old('nama') }}">
+                    name="nama"  value = "{{ $event->nama}}">
                 @error('nama')
                 <div class="invalid-feedback">
                     {{ $messages }}
@@ -42,7 +38,7 @@ active
                     alt="preview image" style="max-height: 150px;">
                 </div>
                 <input class="form-control @error('foto') is-invalid @enderror" type="file" id="foto" 
-                name="foto" value = "{{ $event->foto }}">
+                name="foto" value = "{{ $event->foto}}">
                 @error('foto')
                 <div class="invalid-feedback">
                 {{ $message }}
@@ -53,7 +49,7 @@ active
             <div class="mb-3">
                     <label for="deskripsi" class="form-label">Deskripsi</label>
                     <input type="text" class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" 
-                    name="deskripsi" required autofocus value = "{{ old('deskripsi') }}">
+                    name="deskripsi" value = "{{ $event->deskripsi}}">
                 @error('deskripsi')
                 <div class="invalid-feedback">
                 {{ $messages }}
@@ -64,7 +60,7 @@ active
                 <div class="mb-3">
                     <label for="alamat" class="form-label">Alamat</label>
                     <input type="text" class="form-control @error('alamat') is-invalid @enderror" id="alamat" 
-                    name="alamat" required autofocus value = "{{ old('alamat') }}">
+                    name="alamat" value = "{{ $event->alamat}}">
                 @error('alamat')
                 <div class="invalid-feedback">
                 {{ $messages }}
@@ -73,9 +69,9 @@ active
                 </div>
 
                 <div class="mb-3">
-                    <label for="tanggal_kegiatan" class="form-label">tanggal</label>
+                    <label for="tanggal_kegiatan" class="form-label">Tanggal</label>
                     <input type="text" class="form-control @error('tanggal_kegiatan') is-invalid @enderror" id="tanggal_kegiatan" 
-                    name="tanggal_kegiatan" required autofocus value = "{{ old('tanggal_kegiatan') }}">
+                    name="tanggal_kegiatan" value = "{{ $event->tanggal_kegiatan}}">
                 @error('tanggal_kegiatan')
                 <div class="invalid-feedback">
                 {{ $messages }}
@@ -84,9 +80,9 @@ active
                 </div>
 
                 <div class="mb-3">
-                    <label for="waktu_kegiatan" class="form-label">waktu</label>
+                    <label for="waktu_kegiatan" class="form-label">Waktu</label>
                     <input type="text" class="form-control @error('waktu_kegiatan') is-invalid @enderror" id="waktu_kegiatan" 
-                    name="waktu_kegiatan" required autofocus value = "{{ old('waktu_kegiatan') }}">
+                    name="waktu_kegiatan" value = "{{ $event->waktu_kegiatan}}">
                 @error('waktu_kegiatan')
                 <div class="invalid-feedback">
                 {{ $messages }}
@@ -97,7 +93,7 @@ active
                 <div class="mb-3">
                     <label for="penyelenggara" class="form-label">Penyelenggara</label>
                     <input type="text" class="form-control @error('penyelenggara') is-invalid @enderror" id="penyelenggara"
-                    name="penyelenggara" required autofocus value = "{{ old('penyelenggara') }}">
+                    name="penyelenggara"  value = "{{ $event->penyelenggara}}">
                 @error('penyelenggara')
                 <div class="invalid-feedback">
                 {{ $messages }}
@@ -106,7 +102,7 @@ active
                 </div>
 
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Simpan</button>
          </form>
         </div>
         </div>

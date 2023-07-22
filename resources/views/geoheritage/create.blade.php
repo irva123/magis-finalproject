@@ -19,7 +19,7 @@ active
           <div class="card card-background card-background-after-none align-items-start mt-1 mb-1">
             <div class="full-background" style="background: linear-gradient(90deg, #0A7AFE -1.83%, #13FFE3 52.33%, rgba(15, 14, 14, 0.3) 100%);"></div>
             <div class="card-body text-start p-4 w-100">
-              <h3 class="text-white mb-2">Malang Geopark Information System</h3>
+              <h3 class="text-white mb-2">Malang Geopark Information Sistem 🔥</h3>
               <p class="mb-4 font-weight-semibold">
               Badan Perencanaan Pembangunan Daerah Kabupaten Malang
               </p>
@@ -29,14 +29,14 @@ active
       </div>
 
       <div class="mb-md-0 mb-0 mt-5">
-              <h3 class="font-weight-bold mb-0">Tambah Potensi Geodiversity</h3>
+              <h3 class="font-weight-bold mb-0">Tambah Potensi Geoheritage</h3>
             </div>
 
 <div class="row ">
           <div class=" ml-5 mb-2 pt-4 px-3">
               <div class="d-sm-flex align-items-center">
             <div class="col-lg-10">        
-            <form method="post" action="/geodiversity" enctype= multipart/form-data>
+            <form method="post" action="/geoheritage" enctype= multipart/form-data>
                 @csrf
                 <div class="row">
                 <div class=" col-6">
@@ -115,7 +115,7 @@ active
 
                 <div class="row">
                 <div class="mb-3 col-6">
-                    <label for="link_maps" class="form-label">Tautan Google Maps</label>
+                    <label for="link_maps" class="form-label">Link Maps</label>
                     <input type="text" class="form-control @error('link_maps') is-invalid @enderror" id="link_maps" 
                     name="link_maps" required autofocus value = "{{ old('link_maps') }}">
                 @error('link_maps')
@@ -139,7 +139,7 @@ active
 
                 <div class="row">
                 <div class="mb-3 col-6">
-                    <label for="harga_weekday" class="form-label">Harga Tiket Hari Kerja</label>
+                    <label for="harga_weekday" class="form-label">harga Weekday</label>
                     <input type="text" class="form-control @error('harga_weekday') is-invalid @enderror" id="harga_weekday" 
                     name="harga_weekday" required autofocus value = "{{ old('harga_weekday') }}">
                 @error('harga_weekday')
@@ -150,7 +150,7 @@ active
                 </div>
 
                 <div class="mb-3 col-6">
-                    <label for="harga_weekend" class="form-label">Harga Tiket Akhir Pekan</label>
+                    <label for="harga_weekend" class="form-label">harga Weekend</label>
                     <input type="text" class="form-control @error('harga_weekend') is-invalid @enderror" id="harga_weekend" 
                     name="harga_weekend" required autofocus value = "{{ old('harga_weekend') }}">
                 @error('harga_weekend')
@@ -196,7 +196,7 @@ active
                 @enderror
                 </div>
 
-                <button type="submit" class="btn btn-primary">Tambah</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
          </form>
         </div>
         </div>

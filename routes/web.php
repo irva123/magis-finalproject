@@ -8,9 +8,14 @@ use App\Http\Controllers\KritikController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\MapController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\GeoheritageController;
+use App\Http\Controllers\Geoheritage2Controller;
 use App\Http\Controllers\GeodiversityController;
+use App\Http\Controllers\Geodiversity2Controller;
 use App\Http\Controllers\BiodiversityController;
+use App\Http\Controllers\Biodiversity2Controller;
 use App\Http\Controllers\CulturaldiversityController;
+use App\Http\Controllers\Culturaldiversity2Controller;
 use App\Http\Controllers\GeoparkController;
 use App\Http\Controllers\EventController;
 
@@ -38,6 +43,13 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // Route::get('/map',[App\Http\Controllers\MapController::class,'index'])->name('map.index');
 Route::get('/map2',[App\Http\Controllers\MapController::class,'index'])->name('map2.index');
 Route::get('/map/{slug}',[App\Http\Controllers\MapController::class,'show'])->name('map.show');
+Route::get('logout', function ()
+{
+    auth()->logout();
+    Session()->flush();
+
+    return Redirect::to('/');
+})->name('logout');
 
 Route::resource('centre-point',(CentrePointController::class));
 Route::resource('space',(SpaceController::class));
@@ -49,16 +61,22 @@ Route::get('create-pdf2',[BiodiversityController::class, 'createPDF'])->name('cr
 Route::get('create-pdf3',[CulturaldiversityController::class, 'createPDF'])->name('create-pdf3');
 Route::get('create-pdf4',[EventController::class, 'createPDF'])->name('create-pdf4');
 Route::get('create-pdf',[GeoparkController::class, 'createPDF'])->name('create-pdf');
+Route::get('create-pdf5',[GeoheritageController::class, 'createPDF'])->name('create-pdf5');
 
 Route::resource('/homepage', HomepageController::class);
 Route::resource('/map2', MapController::class);
 Route::resource('/kritik', KritikController::class);
 Route::resource('/dashboard', DashboardController::class);
+Route::resource('/geoheritage', GeoheritageController::class);
 Route::resource('/geodiversity', GeodiversityController::class);
 Route::resource('/biodiversity', BiodiversityController::class);
 Route::resource('/culturaldiversity', CulturaldiversityController::class);
 Route::resource('/event', EventController::class);
 Route::resource('/geopark', GeoparkController::class);
+Route::resource('/geoheritage2', Geoheritage2Controller::class);
+Route::resource('/geodiversity2', Geodiversity2Controller::class);
+Route::resource('/biodiversity2', Biodiversity2Controller::class);
+Route::resource('/culturaldiversity2', Culturaldiversity2Controller::class);
 
 // Route::get('/kritik',[App\Http\Controllers\KritikController::class,'create'])->name('kritik.create');
 //Route::get('/kritik', function () {

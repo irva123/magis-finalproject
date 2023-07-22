@@ -45,18 +45,21 @@
                                                     <li class="nav-item"><a href="#" class="nav-link  font-weight-bold dropdown-toggle" href="#" data-toggle="dropdown"> Geopark <span><i class="ti-angle-down"></i></span></a> 
                                                     <!-- Dropdown list -->
                                                     <ul class="dropdown-menu">
-                                                        <li><a class="dropdown-item" href="/gambar">Geoheritage</a></li>
-                                                        <li><a class="dropdown-item" href="/film">Geodiversity</a></li>
-                                                        <li><a class="dropdown-item" href="/film">Biodiversity</a></li>
-                                                        <li><a class="dropdown-item" href="/film">Cultural Diversity</a></li>
+                                                        <li><a class="dropdown-item" href="/geoheritage2">Geoheritage</a></li>
+                                                        <li><a class="dropdown-item" href="/geodiversity2">Geodiversity</a></li>
+                                                        <li><a class="dropdown-item" href="/biodiversity2">Biodiversity</a></li>
+                                                        <li><a class="dropdown-item" href="/culturaldiversity2">Cultural Diversity</a></li>
                                                     </ul>
                                                     </li>
                                                 </li>
-                                                    <li class="nav-item"><a href="#" class="nav-link  font-weight-bold ">Event</a></li>
+                                                    <li class="nav-item"><a href="#" class="nav-link  font-weight-bold ">Kegiatan</a></li>
                                                     <li class="nav-item"><a href="/map2" class="nav-link  font-weight-bold ">Peta</a></li>
                                                     <li class="nav-item"><a href="/kritik/create" class="nav-link  font-weight-bold ">Kritik dan saran</a></li>
-
-
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="/login">
+                                                        <i class="fa fa-user-circle-o fa-2x" ></i>
+                                                        </a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>

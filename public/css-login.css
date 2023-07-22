@@ -1,0 +1,86 @@
+body {
+    background: url('bg_pantai.jpg') no-repeat fixed center center;
+    background-size: cover;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    display: flex;  
+    flex-wrap: wrap;
+    align-content: center;
+    margin: 20px auto;
+}
+
+.login-block {
+    width: 320px;
+    padding: 20px;
+    background: #D2E4E5;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.login-block h1 {
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.login-block input {
+    width: 100%;
+    height: 42px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0 20px 0 50px;
+    outline: none;
+}
+
+.login-block input#username {
+    background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px top no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input#username:focus {
+    background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input#password {
+    background: #fff url('http://i.imgur.com/Qf83FTt.png') 20px top no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input#password:focus {
+    background: #fff url('http://i.imgur.com/Qf83FTt.png') 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input:active, .login-block input:focus {
+    border: 1px solid #505050;
+}
+
+.login-block button {
+    width: 100%;
+    height: 40px;
+    background: #000;;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    outline: none;
+    cursor: pointer;
+}
+
+.login-block button:hover {
+    background:#505050;
+}
+

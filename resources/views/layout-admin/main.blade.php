@@ -108,8 +108,9 @@
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-img5 {
-  border-radius: 5px 5px 0 0;
+.img5 {
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 
 .container5 {
@@ -148,6 +149,8 @@ body5 {
 
 p5 {
    line-height:5px;
+   margin-top: 0px;
+   margin-bottom: 0px;
 }
 
 .time-right5 {

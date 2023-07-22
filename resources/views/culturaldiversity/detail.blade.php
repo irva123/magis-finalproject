@@ -4,10 +4,6 @@
 Tables
 @endsection
 
-@section('title')
-Table Mobil
-@endsection
-
 @section('highlight2')
 active
 @endsection
@@ -44,12 +40,12 @@ active
                         </p>
 
                         <p>
-                        <h5><strong>Harga Weekday :</strong></h5>
+                        <h5><strong>Harga Tiket Hari Kerja :</strong></h5>
                         <p>{{ $culturaldiversity->harga_weekday}}</p>
                         </p>
 
                         <p>
-                        <h5><strong>Harga Weekend :</strong></h5>
+                        <h5><strong>Harga Tiket Akhir Pekan :</strong></h5>
                         <p>{{ $culturaldiversity->harga_weekend}}</p>
                         </p>
 
