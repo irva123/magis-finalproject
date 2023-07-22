@@ -115,7 +115,7 @@ active
 
                 <div class="row">
                 <div class="mb-3 col-6">
-                    <label for="link_maps" class="form-label">Tautan Google Maps</label>
+                    <label for="link_maps" class="form-label">Tautan Google</label>
                     <input type="text" class="form-control @error('link_maps') is-invalid @enderror" id="link_maps" 
                     name="link_maps" required autofocus value = "{{ old('link_maps') }}">
                 @error('link_maps')

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Space;
 
 class HomepageController extends Controller
 {
@@ -14,7 +15,9 @@ class HomepageController extends Controller
      */
     public function index()
     {
-        return view('homepage');
+        
+        $spaces = Space::all();
+        return view('homepage',['spaces'=>$spaces ]); 
     }
 
     /**

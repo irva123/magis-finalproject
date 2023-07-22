@@ -46,7 +46,8 @@ FACEBOOK: https://www.facebook.com/themefisher
 
                         <div class="wrap-input100 validate-input" data-validate = "Message is required" id="no_hp">
                             <span class="label-input100">No. Hp/WhatsApp</span>
-                            <input class="input100" name="no_hp" placeholder="Masukkan no. hp atau Wa anda
+                            <input class="input100" name="no_hp" placeholder="Masukkan no. hp atau Wa anda"></input>
+                            <span class="focus-input100"></span>
                         </div>
 
                         <div class="wrap-input100 validate-input" data-validate = "Message is required" id="isi_pesan">

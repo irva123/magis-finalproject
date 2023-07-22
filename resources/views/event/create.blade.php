@@ -5,7 +5,7 @@ Tables
 @endsection
 
 @section('title')
-Form Cretae Event
+Form Create Event
 @endsection
 
 @section('highlight2')

@@ -4,11 +4,7 @@
 Tables
 @endsection
 
-@section('title')
-Table Mobil
-@endsection
-
-@section('highlight2')
+@section('highlight5')
 active
 @endsection
 
@@ -19,9 +15,9 @@ active
           <div class="card card-background card-background-after-none align-items-start mt-1 mb-1">
             <div class="full-background" style="background-image: url('../assets/img/hijau-biru.jpeg')"></div>
             <div class="card-body text-start p-4 w-100">
-              <h3 class="text-white mb-2">Malang Geopark Information System</h3>
+              <h3 class="text-white mb-2">Management Geopark Information System</h3>
               <p class="mb-4 font-weight-semibold">
-              Badan Perencanaan Pembangunan Daerah Kabupaten Malang
+              Badan Perencanaan Pembangunan Daerah Kabupaten Malang.
               </p>
             </div>
           </div>
@@ -37,18 +33,18 @@ active
                 </div>
                 <div class="ms-auto d-flex">
                   <button type="button" class="btn btn-sm btn-white me-2">
-                  Lihat Semua
+                  <a href="/geopark"> Lihat Semua </a>
                   </button>
-                  <button type="button" class="btn btn-sm btn-dark btn-icon d-flex align-items-center me-2">
+                  <button type="button" class="btn btn-sm btn-white me-2">
                     <span>
                       <a href="/culturaldiversity/create" class="btn-inner--text">Tambah Potensi</a>
                     </span>
                   </button>
 
-                  {{-- tombol Unduh PDF --}}
-                  <form action="{{route('create-pdf3')}}"class="d-inline">
-                    <button class="btn btn-outline-info  btn-icon-split">
-                      <span class="icon text-white-50">
+                  {{-- tombol Ekspor PDF --}}
+                  <form action="{{route('create-pdf3')}}"class="ms-auto d-flex">
+                    <button class="btn btn-sm btn-white me-2">
+                      <span>
                         <i class="fas fa-download"></i>
                       </span>
                       <span class="text">Unduh Data (PDF)</span>

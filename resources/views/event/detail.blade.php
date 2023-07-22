@@ -4,10 +4,6 @@
 Tables
 @endsection
 
-@section('title')
-Table Mobil
-@endsection
-
 @section('highlight2')
 active
 @endsection
@@ -31,7 +27,7 @@ active
                 <div class="card-body">
                   <div class="row">
                     <div class="col-sm-3">
-                      <p class="mb-0">Kegiatan</p>
+                      <p class="mb-0">Id Kegiatan</p>
                     </div>
                     <div class="col-sm-3">
                       <p class="text-muted mb-0">: {{$event->id}}</p>

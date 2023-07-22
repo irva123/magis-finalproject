@@ -19,7 +19,7 @@ active
           <div class="card card-background card-background-after-none align-items-start mt-1 mb-1">
             <div class="full-background" style="background: linear-gradient(90deg, #0A7AFE -1.83%, #13FFE3 52.33%, rgba(15, 14, 14, 0.3) 100%);"></div>
             <div class="card-body text-start p-4 w-100">
-              <h3 class="text-white mb-2">Malang Geopark Information System</h3>
+              <h3 class="text-white mb-2">Malang Geopark Information System </h3>
               <p class="mb-4 font-weight-semibold">
               Badan Perencanaan Pembangunan Daerah Kabupaten Malang
               </p>
@@ -115,7 +115,7 @@ active
 
                 <div class="row">
                 <div class="mb-3 col-6">
-                    <label for="link_maps" class="form-label">Tautan Google Maps</label>
+                    <label for="link_maps" class="form-label">Tautan Google</label>
                     <input type="text" class="form-control @error('link_maps') is-invalid @enderror" id="link_maps" 
                     name="link_maps" required autofocus value = "{{ old('link_maps') }}">
                 @error('link_maps')

@@ -4,10 +4,6 @@
 Tables
 @endsection
 
-@section('title')
-Table Mobil
-@endsection
-
 @section('highlight2')
 active
 @endsection

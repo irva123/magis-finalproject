@@ -433,6 +433,17 @@ section#section2 .shapes p{
   height: 160px;
 }
 
+.img-fluid{
+  margin-top: 70px;
+}
+
+.img-fluid2{
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
 
 img.imgback:hover {
   padding-top: 32px;
@@ -726,6 +737,14 @@ div#news-slider .owl-next {
 
 }
 
+#section4  h2a{
+  font-size: 70px;
+  font-family: 'Righteous';
+  color: #000000;
+  line-height: 1;
+  text-align: center;
+  margin-top: 80px;
+}
 
 #section4  h2 {
   font-size: 70px;
@@ -1554,7 +1573,7 @@ li.address-section .fa{
   text-align: center;
   padding-top: 0px;
   margin-top: 0px;
-  color: rgb(248, 176, 0);
+  color: rgb(0, 0, 0);
 }
 
 
@@ -1597,9 +1616,9 @@ li.address-section .fa{
     font-family: "Roboto";
     color: rgb(51, 51, 51);
     line-height: 1.4;
-    text-align: left;
     font-weight: bold;
     margin-bottom: 10px;
+    padding-left: 13px;
 }
 
 .single-widget h4{
@@ -1665,9 +1684,9 @@ video {
 
 .video .video-button {
   position: absolute;
-  left: 0;
-  top: 0;
   display: flex;
+  top: 30;
+  right: 25;
   justify-content: center;
   align-items: center;
   width: 100%;

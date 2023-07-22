@@ -5,8 +5,7 @@
 <section id="section0" class="slider-area"> 
             <div class="main-slider owl-theme owl-carousel"> 
                 <!-- Start Slingle Slide -->
-                <div class="single-slide item" style="background-image: url(img/slider/gunung.jpeg)">
-
+                <div class="single-slide item" style="background-image: url(img/slider/pantai5.jpg)">
 
                     <!-- <img src="img/slider/placehold.png"> -->
 
@@ -16,17 +15,17 @@
                                 <div class="row">
                                         <div class="slide-content-wrapper text-center">
                                             <div class="slide-content">
-                                                <img class="classic mb-10" src="img/logo/sigor.png">
-                                                <h2>SIGOR</h2>
-                                                <h3>Sistem Informasi Geopark Badan Perencanaan Pembangunan Daerah Kabupaten Malang</h3>
+                                                <img class="classic mb-10" src="img/logo/magis.png">
+                                                <h2>MAGIS</h2>
+                                                <h3>Malang Geopark Information System Badan Perencanaan Pembangunan Daerah Kabupaten Malang</h3>
 
                                             </div>
                                         </div>
                                     </div>
-                    </div>
-                </div>
-             </div>
-        </section>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
         	<!-- advertisement section -->
 	<div class="abt-section mb-50">
@@ -34,8 +33,8 @@
 			<div class="row">
 				<div class="col-lg-6 col-md-12">
 					<div class="abt-text">
-						<h2><span class="black-text">Apa itu SiGOR ?</span></h2>
-						<p><span class="black-text">Sistem Informasi Geopark Badan Perencanaan Pembangunan Daerah  Kabupaten Malang (SIGOR) adalah suatu platform digital yang dirancang untuk mengumpulkan, mengelola, dan menyajikan informasi terkait Geopark Kabupaten Malang secara efisien dan komprehensif.</span></p>
+						<h2><span class="black-text">Apa itu MAGIS ?</span></h2>
+						<p><span class="black-text" >Malang Geopark Information System Badan Perencanaan Pembangunan Daerah  Kabupaten Malang (MAGIS) adalah suatu platform digital yang dirancang untuk mengumpulkan, mengelola, dan menyajikan informasi terkait Geopark Kabupaten Malang secara efisien dan komprehensif.</span></p>
 						<p><span class="black-text">Sistem ini dibangun oleh Bappeda Kabupaten Malang sebagai upaya untuk memanfaatkan teknologi informasi dan komunikasi guna memfasilitasi pengelolaan Geopark dengan lebih baik. Melalui sistem ini, informasi penting terkait geologi, keanekaragaman hayati, situs-situs geologis, air terjun, dan aset alam lainnya dapat diakses dengan mudah dan cepat.</span></p>
 					</div>
 				</div>
@@ -81,8 +80,8 @@
                             <div class="col-md-12">
                                 <div class="text-center">
                                     <h4>Geodiversity</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus leo et ante lobortis tristique. Donec feugiat nisi sed nibh condimentum porta.</p>                                
-                                    <a href="about.html" class="boxed-btn mt-4">know more</a>
+                                    <p>Geodiversity adalah gambaran keunikan komponen geologi seperti mineral, batuan, fosil, struktur geologi, dan bentang alam yang menjadi kekayaan hakiki suatu daerah serta keberadaan, kekayaan penyebaran, dan keadaannya yang dapat mewakili proses evolusi geologi daerah tersebut.</p>                                
+                                    <a href="/geodiversity2" class="boxed-btn mt-4">Selengkapnya</a>
                                   </div> 
                             </div> 
                         </div>
@@ -95,8 +94,8 @@
                             <div class="col-md-12">
                                 <div class="text-center">
                                     <h4>Biodiversity</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus leo et ante lobortis tristique. Donec feugiat nisi sed nibh condimentum porta.</p>
-                                    <a href="about.html" class="boxed-btn mt-4">know more</a>
+                                    <p>Biodiversity adalah keragaman diantara makhluk hidup, dari berbagai sumber termasuk daratan, pesisir, lautan dan ekosistem perairan lainnya serta kompleksitas ekologis dimana mereka merupakan bagiannya.</p>
+                                    <a href="/biodiversity2" class="boxed-btn mt-4">Selengkapnya</a>
                                   </div> 
                             </div> 
                         </div> 
@@ -109,8 +108,9 @@
                             <div class="col-md-12">
                                 <div class="text-center">
                                     <h4>Cultural Diversity</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus leo et ante lobortis tristique. Donec feugiat nisi sed nibh condimentum porta.</p>
-                                    <a href="about.html" class="boxed-btn mt-4">know more</a>
+                                    <p>Cultural Divesitybudaya masa lalu dan budaya masa kini, baik yang bersifat berwujud (tangible) maupun tidak berwujud (intangible).
+            keragaman Indonesia meliputi rumah adat, upacara adat, alat musik tradisional, pakaian adat, tarian adat, lagu daerah, senjata tradisional, hingga makanan khas.</p>
+                                    <a href="/culturaldiversity2" class="boxed-btn mt-4">Selengkapnya</a>
                                   </div> 
                             </div> 
                         </div>  
@@ -127,7 +127,7 @@
 			<div class="row">
       <div class="col-xs-12">
             <div class="section-title text-center">
-						<h3><span class="black-text">Berita</span></h3>
+						<h3><span class="black-text">Kegiatan</span></h3>
 					</div>
 				</div>
 			</div>

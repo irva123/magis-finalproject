@@ -8,7 +8,7 @@ Tables
 Table Mobil
 @endsection
 
-@section('highlight2')
+@section('highlight3')
 active
 @endsection
 
@@ -37,18 +37,19 @@ active
                 </div>
                 <div class="ms-auto d-flex">
                   <button type="button" class="btn btn-sm btn-white me-2">
-                  <a href="/geopark/"> Lihat Semua </a>
+                  <a href="/geopark"> Lihat Semua </a>
                   </button>
-                  <button type="button" class="btn btn-sm btn-dark btn-icon d-flex align-items-center me-2">
+                  <button type="button" class="btn btn-sm btn-white me-2">
+                    </span>
                     <span>
                       <a href="/geodiversity/create" class="btn-inner--text">Tambah Potensi</a>
                     </span>
                   </button>
 
-                  {{-- tombol Unduh PDF --}}
-                  <form action="{{route('create-pdf1')}}"class="d-inline">
-                    <button class="btn btn-outline-info  btn-icon-split">
-                      <span class="icon text-white-50">
+                  {{-- tombol Ekspor PDF --}}
+                  <form action="{{route('create-pdf1')}}"class="ms-auto d-flex">
+                    <button class="btn btn-sm btn-white me-2">
+                      <span>
                         <i class="fas fa-download"></i>
                       </span>
                       <span class="text">Unduh Data (PDF)</span>

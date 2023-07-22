@@ -179,6 +179,9 @@ p5 {
   <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
   <script src="../assets/js/plugins/chartjs.min.js"></script>
   <script src="../assets/js/plugins/swiper-bundle.min.js" type="text/javascript"></script>
+  <!-- Scripts -->
+  @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @livewireStyles
   <script>
     if (document.getElementsByClassName('mySwiper')) {
       var swiper = new Swiper(".mySwiper", {
@@ -464,22 +467,13 @@ p5 {
             L.marker([<?=$item->titik_koordinat?>], {icon: new MyIcon({iconUrl: '<?=($item->marker->marker=='')?url('storage/icon-biru.png') : url('storage/'.$item->marker->marker)?>'})}).addTo(map)
                 .bindPopup(
                     "<div class='my-2'><img src='{{ url('storage/'.$item->foto) }}' class='img-fluid' width='700px'></div>" +
-                    "<div class='my-2'><strong>Nama Space:</strong> <br>{{ $item->nama }}</div>" +
+                    "<div class='my-2'><strong>Objek Geopark:</strong> <br>{{ $item->nama }}</div>" + "<div class='my-2'><strong>Lokasi:</strong> <br>{{ $item->alamat }}</div>" + "<div class='my-2'><strong>Jam Operasional:</strong> <br>{{ $item->jam_buka }}</div>" +
                     "<div><a href='{{ route('map.show', $item->nama) }}' class='btn btn-outline-info btn-sm'>Read More</a></div>" +
                     "<div class='my-2'></div>"
                 ).addTo(map);
         @endforeach
 
-        // pada koding ini kita menambahkan control pencarian data        
-        var markersLayer = new L.LayerGroup();
-        map.addLayer(markersLayer);
-        var controlSearch = new L.Control.Search({
-            position: 'topleft',
-            layer: markersLayer,
-            initial: false,
-            zoom: 17,
-            markerLocation: true
-        })
+        
 
 
         //menambahkan variabel controlsearch pada addControl

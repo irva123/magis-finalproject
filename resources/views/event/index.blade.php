@@ -4,12 +4,8 @@
 Tables
 @endsection
 
-@section('title')
-Table Mobil
-@endsection
-
-@section('highlight2')
-active
+@section('highlight6')
+Active
 @endsection
 
 @section('navbar')
@@ -36,7 +32,7 @@ active
                   <h6 class="font-weight-semibold text-lg mb-0">Daftar Kegiatan</h6>
                 </div>
                 <div class="ms-auto d-flex">
-                  <button type="button" class="btn btn-sm btn-dark btn-icon d-flex align-items-center me-2">
+                  <button type="button" class="btn btn-sm btn-white me-2">
                     <span>
                       <a href="/event/create" class="btn-inner--text">Tambah Kegiatan</a>
                     </span>

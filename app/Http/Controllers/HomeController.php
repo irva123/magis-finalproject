@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\CentrePoint;
+use App\Models\Space;
+
 
 class HomeController extends Controller
 {
@@ -23,6 +26,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $geoheritage = Space::with('category')->where('id_category', '1')->count();
+        $geodiversity = Space::with('category')->where('id_category', '2')->count();
+        $biodiversity = Space::with('category')->where('id_category', '3')->count();
+        $culturaldiversity = Space::with('category')->where('id_category', '4')->count();
+        $centrePoint = CentrePoint::get()->first();
+        $spaces = Space::get();
+        return view('dashboard',[
+            'spaces' => $spaces,
+            'centrePoint' => $centrePoint
+        ], compact('geoheritage', 'geodiversity', 'biodiversity', 'culturaldiversity'));
     }
-}
+    }

@@ -4,12 +4,8 @@
 Tables
 @endsection
 
-@section('title')
-Table Mobil
-@endsection
-
-@section('highlight2')
-active
+@section('highlight7')
+Active
 @endsection
 
 @section('navbar')
@@ -27,6 +23,7 @@ active
           </div>
         </div>
       </div>
+      </div>
 <div class="body5">
 <div class="center5 mt-3 mb-3">
 <h2>Kritik dan Saran</h2>
@@ -37,12 +34,17 @@ active
 <div class="card5">
   <div class="container5">
   <div class="row5">
-  <img src='{{ url('storage/FotoProfil.jpg') }}' alt="Avatar" style="width:50px">
+  <img src='{{ url('storage/FotoProfil.jpg') }}' alt="Avatar" style="width:50px" class="rounded-circle img5">
   <span class="time-right5">{{ $kritik->created_at }}</span>
-  <p5><span>{{ $kritik->nama }}</span></p>
-  <p5><span>{{ $kritik->email }}</span></p>
-  <p5><span>{{ $kritik->no_hp }}</span></p>
-    <h3>{{ $kritik->isi_pesan }}</h3> 
+  <p5><span>{{ $kritik->nama }}</span></p5>
+  <div>
+  <a><span>{{ $kritik->email }}</span></a>
+</div>
+  <div>
+  <a><span>{{ $kritik->no_hp }}</span></a>
+  </div>
+    <a>{{ $kritik->isi_pesan }}</a> 
+    
   </div>
   </div>
   </div>
@@ -52,3 +54,5 @@ active
 </div>
 @endforeach
   @endsection
+
+  
