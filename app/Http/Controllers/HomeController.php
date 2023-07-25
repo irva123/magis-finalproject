@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\CentrePoint;
 use App\Models\Space;
+use App\Models\EventModel;
 
 
 class HomeController extends Controller

@@ -1,7 +1,7 @@
 <body class="g-sidenav-show  bg-gray-100">
   <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 fixed-start full-background bg-slate-900" id="sidenav-main">
     <div class="sidenav-header">
-        <img width="70" height="auto" src="/img/logo/magis.png">
+        <img width="70" height="auto" src="/img/logo/LOGO_WITH MAGIS.png">
     </div>
     <div class="px-4  w-auto " id="sidenav-collapse-main">
       <ul class="navbar-nav">
@@ -42,7 +42,7 @@
             <span class="text-white nav-link-text ms-1" >Geopark</span>
           </a>
         </li>
-        <li class="nav-item border-start my-0 pt-2">
+        <li class="nav-item border-start my-0">
           <a class="nav-link position-relative ms-0 ps-2 py-2 @yield('highlight2')" href="/geoheritage" >
             <span class="text-white nav-link-text ms-1">Data Geoheritage</span>
           </a>

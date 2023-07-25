@@ -670,9 +670,11 @@ div#news-slider .owl-next {
 .navbar-default .navbar-nav>.active>a, 
 .navbar-default .navbar-nav>.active>a:hover, 
 .navbar-default .navbar-nav>.active>a:focus {
-  color: #555;
+  color: #333333;
   background: none;
 }
+
+
 
 .navBrandText{
   padding: 0px !important;
@@ -1023,7 +1025,11 @@ div#news-slider .owl-next {
 */
 
 .contact{
-  background: #f7f7f7;
+  background: #D2E4E5;
+}
+
+.contact2{
+  background: #333333;
 }
 
 .contact100-form{
@@ -1089,7 +1095,7 @@ div#news-slider .owl-next {
   }
   
   .contact100-form-title h3{
-      font-size: 15px;
+      font-size: 30px;
       font-family: "Roboto";
       color: rgb(248, 176, 0);
       font-weight: bold;
@@ -1102,11 +1108,12 @@ div#news-slider .owl-next {
   }
 
   .contact100-form-title h2{
-      font-size: 70px;
-      font-family: 'Righteous';
+      font-size: 50px;
+      font-family: 'arial black';
       color: rgb(68, 68, 68);
       line-height: 1;
       text-align: center;  
+      padding-top: 80px;
 }
   
 .wrapper {

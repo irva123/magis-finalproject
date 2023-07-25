@@ -76,8 +76,6 @@
     <body>
      <!-- header -->
         <!-- Navbar -->
-        @include('layouts.header')
-        @yield('navbar')
 
         <!-- Footer -->
         <footer class="footer pt-3  ">
@@ -114,9 +112,9 @@
     @foreach ($spaces as $item)
             L.marker([<?=$item->titik_koordinat?>], {icon: new MyIcon({iconUrl: '<?=($item->marker->marker=='')?url('storage/icon-biru.png') : url('storage/'.$item->marker->marker)?>'})}).addTo(map)
                 .bindPopup(
-                    "<div class='my-2'><img src='{{ url('storage/'.$item->foto) }}' class='img-fluid' width='700px'></div>" +
-                    "<div class='my-2'><strong>Nama Space:</strong> <br>{{ $item->nama }}</div>" +
-                    "<div><a href='{{ route('map.show', $item->nama) }}' class='btn btn-outline-info btn-sm'>Read More</a></div>" +
+                    "<div class='my-2'><img src='{{ url('storage/'.$item->foto) }}' class='img-fluid mt-0' width='700px'></div>" +
+                    "<div class='my-2'><strong>Objek Geopark:</strong> <br>{{ $item->nama }}</div>" + "<div class='my-2'><strong>Lokasi:</strong> <br>{{ $item->alamat }}</div>" + "<div class='my-2'><strong>Jam Operasional:</strong> <br>{{ $item->jam_buka }}</div>" +
+                    "<div><a href='{{ route('map.show', $item->nama) }}' class='btn btn-outline-info btn-sm'>Detail</a></div>" +
                     "<div class='my-2'></div>"
                 ).addTo(map);
         @endforeach

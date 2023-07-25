@@ -4,20 +4,21 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Space;
 use App\Models\EventModel;
-class HomepageController extends Controller
+
+class Event2Controller extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $event = EventModel::all();
-        $spaces = Space::all();
-        return view('homepage',['spaces'=>$spaces, 'event'=>$event ]); 
+        $pagination = 9;
+        $event = EventModel::OrderBy('created_at', 'desc')->paginate($pagination);
+        $event = EventModel::get();
+        return view('event.tampilan', ['event'=>$event])->with('i', ($request->input('page',1)-1)* $pagination);
     }
 
     /**
@@ -36,9 +37,9 @@ class HomepageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(EventModel $event)
     {
-        //
+        return view('potensi.detail-event', compact('event'));
     }
 
     /**
@@ -47,9 +48,9 @@ class HomepageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(EventModel $event2)
     {
-        //
+        return view('event.detail-event', compact('event2'));
     }
 
     /**

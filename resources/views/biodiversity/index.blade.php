@@ -13,10 +13,10 @@ active
       <div class="row">
         <div class="col-12">
           <div class="card card-background card-background-after-none align-items-start mt-1 mb-1">
-            <div class="full-background" style="background-image: url('../assets/img/hijau-biru.jpeg')"></div>
+            <div class="full-background" style="background: #D2E4E5"></div>
             <div class="card-body text-start p-4 w-100">
-              <h3 class="text-white mb-2">Management Geopark Information System</h3>
-              <p class="mb-4 font-weight-semibold">
+              <h3 class="text-black mb-2 mt-3">Malang Geopark Information System</h3>
+              <p class="text-black mb-4 font-weight">
               Badan Perencanaan Pembangunan Daerah Kabupaten Malang.
               </p>
             </div>
@@ -25,19 +25,19 @@ active
       </div>
       <div class="row">
         <div class="col-12">
-          <div class="card border shadow-xs mb-4">
-            <div class="card-header border-bottom pb-0">
+          <div class="card border shadow-xs mb-4 mt-4">
+            <div class="card-header border-bottom pt-1">
               <div class="d-sm-flex align-items-center">
                 <div>
                   <h6 class="font-weight-semibold text-lg mb-0">Daftar Biodiversity</h6>
                 </div>
-                <div class="ms-auto d-flex">
+                <div class="ms-auto d-flex pt-3">
                   <button type="button" class="btn btn-sm btn-white me-2">
                   <a href="/geopark"> Lihat Semua </a>
                   </button>
                   <button type="button" class="btn btn-sm btn-white me-2">
                     <span>
-                      <a href="/biodiversity/create" class="btn-inner--text">Tambah Product></a>
+                      <a href="/biodiversity/create" class="btn-inner--text">Tambah Potensi</a>
                     </span>
                   </button>
 
@@ -99,7 +99,8 @@ active
                         <span class="text-secondary text-sm font-weight-normal">{{ $space->jam_buka}}</span>
                       </td>
                       <td class="align-middle text-center">
-                        <span class="text-secondary text-sm font-weight-normal"> {{ $space->harga_weekday}}</span>
+                        <span class="text-secondary text-sm font-weight-normal">Hari kerja: {{ $space->harga_weekday}}</span>
+                        <p class="text-secondary text-sm font-weight-normal">Akhir Pekan: {{ $space->harga_weekend}}</p>
                       </td>
                       <td class="align-middle text-center">
                         <span class="text-secondary text-sm font-weight-normal">{{ $space->kontak}}</span>

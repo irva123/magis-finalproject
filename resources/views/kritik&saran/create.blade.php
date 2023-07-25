@@ -27,7 +27,6 @@ FACEBOOK: https://www.facebook.com/themefisher
   <!-- Contact Start -->
   <section id="section6" class="contact">
             <div class="contact100-form-title container">
-                <h3>Bappeda Kabupaten Malang</h3>
                 <h2>Kritik & Saran</h2>
                     <form  class="contact100-form validate-form" method="post" action="/kritik" enctype= multipart/form-data>
                 @csrf
@@ -59,15 +58,13 @@ FACEBOOK: https://www.facebook.com/themefisher
             <div class="col-md-12 text-right">
             </div>
                         <div class="container-contact100-form-btn">
-                            <button class="contact100-form-btn" type="submit">
+                            <button class="contact100-form-btn" type="submit" id="kirim">
                                 <span>
                                     Kirim
                                 </span>
                             </button>
                         </div>
                     </form>
-                </div>
-        </section>
         <!-- Contact End -->
 </section>
 <!--====  End of Contact Form  ====-->

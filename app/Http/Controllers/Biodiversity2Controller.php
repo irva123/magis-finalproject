@@ -42,10 +42,11 @@ class Biodiversity2Controller extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Space $biodiversity2)
     {
-        //
+        return view('potensi.detail-biodiversity', compact('biodiversity2'));
     }
+    
 
     /**
      * Display the specified resource.
@@ -53,9 +54,9 @@ class Biodiversity2Controller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Space $biodiversity2)
     {
-        //
+        return view('potensi.detail-biodiversity', compact('biodiversity2'));
     }
 
     /**

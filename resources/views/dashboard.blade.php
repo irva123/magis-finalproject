@@ -14,14 +14,14 @@ Active
 
 @section('navbar')
 <div class="container-fluid py-4 px-5">
-<div class="row">
+      <div class="row">
         <div class="col-12">
           <div class="card card-background card-background-after-none align-items-start mt-1 mb-1">
             <div class="full-background" style="background: #D2E4E5"></div>
             <div class="card-body text-start p-4 w-100">
-              <h3 class="text-black mb-2 mt-3">Malang Geopark Information System</h3>
-              <p class=" text-black mb-4 font-weight-semibold">
-              Badan Perencanaan Pembangunan Daerah Kabupaten Malang
+              <h3 class="text-black mb-2 mt-3 font-weight-bold">Malang Geopark Information System</h3>
+              <p class="text-black mb-4 font-weight">
+              Badan Perencanaan Pembangunan Daerah Kabupaten Malang.
               </p>
             </div>
           </div>

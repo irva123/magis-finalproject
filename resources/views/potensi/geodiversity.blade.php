@@ -35,7 +35,7 @@ FACEBOOK: https://www.facebook.com/themefisher
                 <hr>
             </div>
             </div>
-            <form action="{{ url()->current() }}" method="get">
+            <!-- <form action="{{ url()->current() }}" method="get">
             <input type="search"
             name="keyword"
             value="{{ request('keyword') }}"
@@ -49,7 +49,7 @@ FACEBOOK: https://www.facebook.com/themefisher
 
     </button>
 </div>
-</form>
+</form> -->
           @foreach ($spaces as $space)
           <div class="col-lg-4 text-center">
             <img src="{{ url('storage/'.$space->foto) }}" alt="" class="img-fluid2 rounded-circle w-50 mb-4">

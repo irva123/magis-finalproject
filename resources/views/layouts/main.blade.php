@@ -53,5 +53,23 @@
         <script src="{{ asset('tampilan/js/main.js')}}"></script>
         <!-- magnific popup -->
 	<script src="{{ asset('tampilan/js/jquery.magnific-popup.min.js')}}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(document).on('click', '#kirim', function(e){
+                e.preventDefault();
+                var link = $(this).attr("href");
+
+                Swal.fire({
+                position: 'top-center',
+                icon: 'success',
+                title: 'Kritik & Saran Anda Telah Terkirim',
+                showConfirmButton: true,
+                timer: 1500
+                })
+            });
+        });
+        </script>
     </body>
 </html>

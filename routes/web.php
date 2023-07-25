@@ -18,6 +18,7 @@ use App\Http\Controllers\CulturaldiversityController;
 use App\Http\Controllers\Culturaldiversity2Controller;
 use App\Http\Controllers\GeoparkController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\Event2Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,7 +49,7 @@ Route::get('logout', function ()
     auth()->logout();
     Session()->flush();
 
-    return Redirect::to('/');
+    return Redirect::to('/homepage');
 })->name('logout');
 
 Route::resource('centre-point',(CentrePointController::class));
@@ -77,6 +78,7 @@ Route::resource('/geoheritage2', Geoheritage2Controller::class);
 Route::resource('/geodiversity2', Geodiversity2Controller::class);
 Route::resource('/biodiversity2', Biodiversity2Controller::class);
 Route::resource('/culturaldiversity2', Culturaldiversity2Controller::class);
+Route::resource('/event2', Event2Controller::class);
 
 // Route::get('/kritik',[App\Http\Controllers\KritikController::class,'create'])->name('kritik.create');
 //Route::get('/kritik', function () {
