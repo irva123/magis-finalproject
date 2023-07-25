@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Space;
-
+use App\Models\EventModel;
 class HomepageController extends Controller
 {
     /**
@@ -15,9 +15,9 @@ class HomepageController extends Controller
      */
     public function index()
     {
-        
+        $event = EventModel::all();
         $spaces = Space::all();
-        return view('homepage',['spaces'=>$spaces ]); 
+        return view('homepage',['spaces'=>$spaces, 'event'=>$event ]); 
     }
 
     /**

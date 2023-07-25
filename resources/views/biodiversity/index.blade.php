@@ -12,19 +12,19 @@ active
 <div class="container-fluid py-4 px-5">
       <div class="row">
         <div class="col-12">
-        <div class="card card-background card-background-after-none align-items-start mt-1 mb-1">
+          <div class="card card-background card-background-after-none align-items-start mt-1 mb-1">
             <div class="full-background" style="background: #D2E4E5"></div>
             <div class="card-body text-start p-4 w-100">
               <h3 class="text-black mb-2 mt-3">Malang Geopark Information System</h3>
-              <p class=" text-black mb-4 font-weight-semibold">
-              Badan Perencanaan Pembangunan Daerah Kabupaten Malang
+              <p class="text-black mb-4 font-weight">
+              Badan Perencanaan Pembangunan Daerah Kabupaten Malang.
               </p>
             </div>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-12">  
+        <div class="col-12">
           <div class="card border shadow-xs mb-4 mt-4">
             <div class="card-header border-bottom pt-1">
               <div class="d-sm-flex align-items-center">
@@ -65,8 +65,7 @@ active
                       <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Alamat</th>
                       <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Titik koordinat</th>
                       <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Operasional</th>
-                      <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Harga Tiket Hari Kerja</th>
-                      <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Harga Tiket Akhir Pekan</th>
+                      <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Harga Tiket</th>
                       <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Kontak</th>
                       <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Sosial Media</th>
                       <th class="text-secondary opacity-7"></th>
@@ -100,7 +99,8 @@ active
                         <span class="text-secondary text-sm font-weight-normal">{{ $space->jam_buka}}</span>
                       </td>
                       <td class="align-middle text-center">
-                        <span class="text-secondary text-sm font-weight-normal"> {{ $space->harga_weekday}}</span>
+                        <span class="text-secondary text-sm font-weight-normal">Hari kerja: {{ $space->harga_weekday}}</span>
+                        <p class="text-secondary text-sm font-weight-normal">Akhir Pekan: {{ $space->harga_weekend}}</p>
                       </td>
                       <td class="align-middle text-center">
                         <span class="text-secondary text-sm font-weight-normal">{{ $space->kontak}}</span>

@@ -15,9 +15,9 @@
                                 <div class="row">
                                         <div class="slide-content-wrapper text-center">
                                             <div class="slide-content">
-                                                <img class="classic mb-10" src="img/logo/magis.png">
-                                                <h2>MAGIS</h2>
-                                                <h3>Malang Geopark Information System Badan Perencanaan Pembangunan Daerah Kabupaten Malang</h3>
+                                                <img class="classic mb-10" src="img/logo/LOGO_WITH MAGIS.png">
+                                                <h3>Malang Geopark Information System </h3>
+                                                <h3>Badan Perencanaan Pembangunan Daerah Kabupaten Malang</h3>
 
                                             </div>
                                         </div>
@@ -131,55 +131,27 @@
 					</div>
 				</div>
 			</div>
-
+            @foreach ($event as $space)
 			<div class="row">
 				<div class="col-lg-4 col-md-6">
 					<div class="single-latest-news">
-						<a href="single-news.html"><div class="latest-news-bg news-bg-1"></div></a>
+						<a href="single-news.html"><div class="latest-news-bg news-bg-1"> <img src ="{{ url('storage/'.$space->foto) }}" style="width:400px;height:220px;"></div></a>
 						<div class="news-text-box">
-							<h3><a href="single-news.html">You will vainly look for fruit on it in autumn.</a></h3>
+							<h3><a href="single-news.html">{{ $space->nama }}</a></h3>
 							<p class="blog-meta">
-								<span class="ti-calendar"><i class="fas fa-calendar"></i> 27 December, 2019</span>
+								<span class="ti-calendar"><i class="fas fa-calendar"></i> {{ $space->tanggal_kegiatan }}</span>
 							</p>
-							<p class="excerpt">Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus nisi. Praesent vitae mattis nunc, egestas viverra eros.</p>
+							<p class="excerpt">{{ $space->deskripsi }}</p>
 							<div class="text-center">
-                            <a href="single-news.html" class="boxed-btn2">read more </i></a>
+                            <a href="single-news.html" class="boxed-btn2">Selengkapnya </i></a>
 						</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-latest-news">
-						<a href="single-news.html"><div class="latest-news-bg news-bg-2"></div></a>
-						<div class="news-text-box">
-							<h3><a href="single-news.html">A man's worth has its season, like tomato.</a></h3>
-							<p class="blog-meta">
-								<span class="ti-calendar"><i class="fas fa-calendar"></i> 27 December, 2019</span>
-							</p>
-							<p class="excerpt">Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus nisi. Praesent vitae mattis nunc, egestas viverra eros.</p>
-							<div class="text-center">
-                            <a href="single-news.html" class="boxed-btn2">read more </i></a>
-						</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
-					<div class="single-latest-news">
-						<a href="single-news.html"><div class="latest-news-bg news-bg-3"></div></a>
-						<div class="news-text-box">
-							<h3><a href="single-news.html">Good thoughts bear good fresh juicy fruit.</a></h3>
-							<p class="blog-meta">
-								<span class="ti-calendar"><i class="fas fa-calendar"></i> 27 December, 2019</span>
-							</p>
-							<p class="excerpt">Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus nisi. Praesent vitae mattis nunc, egestas viverra eros.</p>
-							<div class="text-center">
-                            <a href="single-news.html" class="boxed-btn2">read more </i></a>
-						</div>
-                        </div>
-					</div>
-				</div>
+                @endforeach
 			</div>
 		</div>
 	</div>
+    
   @endsection
   </html>

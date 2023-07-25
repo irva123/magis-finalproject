@@ -49,7 +49,7 @@ Route::get('logout', function ()
     auth()->logout();
     Session()->flush();
 
-    return Redirect::to('/');
+    return Redirect::to('/homepage');
 })->name('logout');
 
 Route::resource('centre-point',(CentrePointController::class));

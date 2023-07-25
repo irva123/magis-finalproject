@@ -37,19 +37,13 @@
             </svg></span>
                     </div>
                     <div class="container-contact100-form-btn">
-                            <button class="contact100-form-btn">
-                                <span><a href="{{ route('event2.show', $space->id) }}">
-                                    Detail
-                                </a></span>
-                            </button>
+						<button><span><a href="{{ route('event2.show', $space->id) }}" class="contact100-form-btn"> Detail</a></span></button>
+					</div>
                     </div>
-                        </div>
-				    </div>
+				</div>
           @endforeach
-
 </div>
 </div>
 </div>
 @endsection
 </html>
-

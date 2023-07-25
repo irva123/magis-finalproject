@@ -70,7 +70,7 @@ active
                 </div>
             </div>
             <div class="col-md-6 col-xs-6">
-                <div class="card mb-3">
+            <div class="card mb-3">
                 <p>
                     <h5>
                         <strong class="px-3">Foto</strong>
@@ -82,8 +82,6 @@ active
                     <div class="card-body">
                     <iframe src="{{ $geoheritage->link_maps }}" width="490" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                </div>
-            </div>
             </div>
         </div>
         </div>

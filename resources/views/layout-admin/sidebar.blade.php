@@ -1,7 +1,7 @@
 <body class="g-sidenav-show  bg-gray-100">
   <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 fixed-start full-background bg-slate-900" id="sidenav-main">
     <div class="sidenav-header">
-        <img width="70" height="auto" src="/img/logo/magis.png">
+        <img width="70" height="auto" src="/img/logo/LOGO_WITH MAGIS.png">
     </div>
     <div class="px-4  w-auto " id="sidenav-collapse-main">
       <ul class="navbar-nav">

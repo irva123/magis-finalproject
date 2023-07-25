@@ -19,7 +19,6 @@ class Event2Controller extends Controller
         $event = EventModel::OrderBy('created_at', 'desc')->paginate($pagination);
         $event = EventModel::get();
         return view('event.tampilan', ['event'=>$event])->with('i', ($request->input('page',1)-1)* $pagination);
-
     }
 
     /**
@@ -38,9 +37,9 @@ class Event2Controller extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(EventModel $event)
     {
-        //
+        return view('potensi.detail-event', compact('event'));
     }
 
     /**
@@ -51,7 +50,7 @@ class Event2Controller extends Controller
      */
     public function show(EventModel $event2)
     {
-        return view('event.detail2', compact('event2'));
+        return view('event.detail-event', compact('event2'));
     }
 
     /**

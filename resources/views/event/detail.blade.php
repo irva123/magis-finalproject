@@ -4,7 +4,7 @@
 Tables
 @endsection
 
-@section('highlight2')
+@section('highlight6')
 active
 @endsection
 
@@ -48,9 +48,9 @@ active
                     <div class="card-footer pb-0">
                         <a href="/event" class="btn btn-outline-primary">Kembali</a>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-xs-6">
+                    </div>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
             <div class="card px-3">
                     <p>
                         <h5>
@@ -63,5 +63,5 @@ active
             </div>
         </div>
         </div>
-    </div>
+        </div>
   @endsection

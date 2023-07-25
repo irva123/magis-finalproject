@@ -42,9 +42,9 @@ class Geoheritage2Controller extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Space $geoheritage2)
     {
-        //
+        return view('potensi.detail-geoheritage', compact('geoheritage2'));
     }
 
     /**

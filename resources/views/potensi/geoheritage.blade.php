@@ -7,11 +7,11 @@
             <div class="row text-center">
               <div class="col-lg-12">
                 <h3>Geoheritage</h3>
-                <h5 class="black-text">Geodiversity adalah gambaran keunikan komponen geologi seperti mineral, batuan, fosil, struktur geologi, dan bentang alam yang menjadi kekayaan hakiki suatu daerah serta keberadaan, kekayaan penyebaran, dan keadaannya yang dapat mewakili proses evolusi geologi daerah tersebut</h5>
+                <h5 class="black-text">Geoheritage atau warisan geologi adalah keragaman geologi (geodiversity) yang memiliki nilai lebih sebagai suatu warisan karena menjadi rekaman yang pernah atau sedang terjadi di bumi yang karena nilai ilmiahnya tinggi, langka, unik, dan indah, sehingga dapat digunakan untuk keperluan penelitian dan pendidikan kebumian</h5>
                 <hr>
             </div>
             </div>
-            <form action="{{ url()->current() }}" method="get">
+            <!-- <form action="{{ url()->current() }}" method="get">
             <input type="search"
             name="keyword"
             value="{{ request('keyword') }}"
@@ -25,7 +25,7 @@
 
     </button>
     </div>
-</form>
+</form> -->
 @foreach ($spaces as $space)
           <div class="col-lg-4 text-center">
             <img src="{{ url('storage/'.$space->foto) }}" alt="" class="img-fluid2 rounded-circle w-50 mb-4">

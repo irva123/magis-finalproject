@@ -30,18 +30,18 @@ FACEBOOK: https://www.facebook.com/themefisher
           <div class="col-12 text-center ">
             <div class="row text-center mt-5">
               <div class="col-lg-12">
-                <h3>{{ $geodiversity2->nama }}</h3>
+                <h3>{{ $culturaldiversity2->nama }}</h3>
                 <hr>
             </div>
             </div>
           <!-- advertisement section -->
           <div class="container py-4 justify-content-center mt-3 px-4">
           <div class="card-body">
-          <img class="img-fluid" width="500" height="300" src="{{ url('storage/'.$geodiversity2->foto) }}"
+          <img class="img-fluid" width="500" height="300" src="{{ url('storage/'.$culturaldiversity2->foto) }}"
                             alt="">
                     </div>    
                         <p>
-                        <p class="black-text2">{{ $geodiversity2->deskripsi }}</p>
+                        <p class="black-text2">{{ $culturaldiversity2->deskripsi }}</p>
                         </p>
                       </br>
                       </br>
@@ -53,32 +53,32 @@ FACEBOOK: https://www.facebook.com/themefisher
 
                         <p>
                         <h5 class="black-text"><strong>Alamat :</strong></h5>
-                        <p class="black-text3">{{ $geodiversity2->alamat }}</p>
+                        <p class="black-text3">{{ $culturaldiversity2->alamat }}</p>
                         </p>
 
                         <p>
                         <h5 class="black-text"><strong>Jam Operasional :</strong></h5>
-                        <p class="black-text3">{{ $geodiversity2->jam_buka}}</p>
+                        <p class="black-text3">{{ $culturaldiversity2->jam_buka}}</p>
                         </p>
 
                         <p>
                         <h5 class="black-text"><strong>Harga Hari Kerja :</strong></h5>
-                        <p class="black-text3">{{ $geodiversity2->harga_weekday}}</p>
+                        <p class="black-text3">{{ $culturaldiversity2->harga_weekday}}</p>
                         </p>
 
                         <p>
                         <h5 class="black-text"><strong>Harga Akhir Pekan :</strong></h5>
-                        <p class="black-text3">{{ $geodiversity2->harga_weekend}}</p>
+                        <p class="black-text3">{{ $culturaldiversity2->harga_weekend}}</p>
                         </p>
 
                         <p>
                         <h5 class="black-text"><strong>Kontak :</strong></h5>
-                        <p class="black-text3">{{ $geodiversity2->kontak}}</p>
+                        <p class="black-text3">{{ $culturaldiversity2->kontak}}</p>
                         </p>
 
                         <p>
                         <h5 class="black-text"><strong>Sosial Media :</strong></h5>
-                        <p class="black-text3">{{ $geodiversity2->sosmed}}</p>
+                        <p class="black-text3">{{ $culturaldiversity2->sosmed}}</p>
                         </p>
 
                     </div>
@@ -87,7 +87,7 @@ FACEBOOK: https://www.facebook.com/themefisher
             <div class="col-md-6 col-xs-6">
             <div class="card ">
                     <div class="card-body">
-                    <iframe src="{{ $geodiversity2->link_maps }}" width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="{{ $culturaldiversity2->link_maps }}" width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                   </div>
             </div>
