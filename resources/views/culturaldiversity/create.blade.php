@@ -8,7 +8,7 @@ Tables
 Form Cretae Geodiversity
 @endsection
 
-@section('highlight2')
+@section('highlight5')
 active
 @endsection
 

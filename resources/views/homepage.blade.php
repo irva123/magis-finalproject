@@ -143,13 +143,15 @@
 							</p>
 							<p class="excerpt">{{ $space->deskripsi }}</p>
 							<div class="text-center">
-                            <a href="single-news.html" class="boxed-btn2">Selengkapnya </i></a>
+                            <a href="{{ route('event2.show', $space->id) }}" class="boxed-btn2">Selengkapnya </i></a>
+						
 						</div>
-						</div>
+                        </div>
 					</div>
 				</div>
                 @endforeach
 			</div>
+            </div>
 		</div>
 	</div>
     

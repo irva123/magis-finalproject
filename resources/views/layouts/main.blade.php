@@ -29,6 +29,8 @@
         
         <script src="{{ asset('tampilan/js/vendor/modernizr-2.8.3.min.js')}}"></script>
 
+        
+
     </head>
     <body>
      <!-- header -->
@@ -54,7 +56,7 @@
         <!-- magnific popup -->
 	<script src="{{ asset('tampilan/js/jquery.magnific-popup.min.js')}}"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript">
         $(function(){
             $(document).on('click', '#kirim', function(e){
@@ -70,6 +72,6 @@
                 })
             });
         });
-        </script>
+        </script> -->
     </body>
 </html>

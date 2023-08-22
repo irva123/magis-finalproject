@@ -7,6 +7,7 @@ use App\Http\Livewire\MapLocation;
 use App\Http\Controllers\KritikController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\MapController;
+use App\Http\Controllers\Map2Controller;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GeoheritageController;
 use App\Http\Controllers\Geoheritage2Controller;
@@ -31,7 +32,7 @@ use App\Http\Controllers\Event2Controller;
 |
 */
 
-Route::get('/', function () {
+Route::get('/a', function () {
     return view('homepage');
 });
 // MENAMBAHKAN ROUTE BARU UNTUK MENAMPILKAN MAP
@@ -64,8 +65,9 @@ Route::get('create-pdf4',[EventController::class, 'createPDF'])->name('create-pd
 Route::get('create-pdf',[GeoparkController::class, 'createPDF'])->name('create-pdf');
 Route::get('create-pdf5',[GeoheritageController::class, 'createPDF'])->name('create-pdf5');
 
+Route::resource('/', HomepageController::class);
 Route::resource('/homepage', HomepageController::class);
-Route::resource('/map2', MapController::class);
+Route::resource('/map2', Map2Controller::class);
 Route::resource('/kritik', KritikController::class);
 Route::resource('/dashboard', DashboardController::class);
 Route::resource('/geoheritage', GeoheritageController::class);

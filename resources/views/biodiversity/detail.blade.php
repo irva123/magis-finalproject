@@ -4,7 +4,7 @@
 Tables
 @endsection
 
-@section('highlight2')
+@section('highlight4')
 active
 @endsection
 
