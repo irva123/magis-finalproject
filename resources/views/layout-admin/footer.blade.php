@@ -1,15 +1,11 @@
-        <div class="container-fluid">
-          <div class="row align-items-center justify-content-lg-between">
-            <div class="col-lg-6 mb-lg-0 mb-4">
-              <div class="copyright text-center text-xs text-muted text-lg-start">
-                Copyright
+<footer class="sticky-footer">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto text-xs ">
+                        <span>Copyright
                 © <script>
                   document.write(new Date().getFullYear())
                 </script>
-                Social Economic Accelerator Lab
-                <a href="https://www.creative-tim.com" class="text-secondary" target="_blank"></a>.
-              </div>
-            </div>
-          
-          </div>
-        </div>
+                Social Economic Accelerator Lab</span>
+                    </div>
+                </div>
+            </footer>

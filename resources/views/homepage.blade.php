@@ -125,7 +125,7 @@
 	<div class="latest-news pt-50 pb-150">
 		<div class="container">
 			<div class="row">
-      <div class="col-xs-12">
+        <div class="col-xs-12">
             <div class="section-title text-center">
 						<h3><span class="black-text">Kegiatan</span></h3>
 					</div>
@@ -143,14 +143,15 @@
 							</p>
 							<p class="excerpt">{{ $space->deskripsi }}</p>
 							<div class="text-center">
-                            <a href="single-news.html" class="boxed-btn2">Selengkapnya </i></a>
-						</div>
+                            <a href="{{ route('event2.show', $space->id) }}" class="boxed-btn2">Selengkapnya </i></a>
+						    </div>
 						</div>
 					</div>
 				</div>
                 @endforeach
 			</div>
 		</div>
+        </div>
 	</div>
     
   @endsection

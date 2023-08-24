@@ -8,7 +8,7 @@ Tables
 Table Mobil
 @endsection
 
-@section('highlight2')
+@section('highlight3')
 active
 @endsection
 
